@@ -1,0 +1,31 @@
+theme = "mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+auto-format = true
+true-color = true
+middle-click-paste = false
+bufferline = "always"
+text-width = 80
+
+[editor.statusline]
+left = ["mode", "read-only-indicator", "spinner", "version-control"]
+center = ["file-absolute-path", "total-line-numbers"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
+separator = "│"
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+[editor.indent-guides]
+render = true

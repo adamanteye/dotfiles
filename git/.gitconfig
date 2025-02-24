@@ -1,0 +1,33 @@
+[user]
+	name = adamanteye
+	email = ada@adamanteye.cc
+	signingKey = FC012E34C8FFF4AB
+[commit]
+	gpgsign = true
+	template = /home/adamanteye/.gitmessage
+[tag]
+	gpgSign = true
+[alias]
+	ss = status
+	st = stash
+	kmt = commit
+	kmta = commit -a
+	chk = checkout
+	br = branch
+	ps = push
+	pl = pull
+	df = diff
+[init]
+	defaultBranch = master
+[core]
+	quotepath = false
+	pager = bat --style=plain
+[http]
+	proxy = http://[::1]:10801
+[https]
+	proxy = http://[::1]:10801
+[color]
+	ui = true
+	pager = false
+[pull]
+	rebase = true
