@@ -1,0 +1,145 @@
+[[language]]
+name = "make"
+formatter = { command = "mbake", args = ["format", "--stdin"] }
+auto-format = true
+
+[[language]]
+name = "email"
+scope = "source.default"
+file-types = ["*"]
+formatter = { command = "typstyle", args = [
+    "--wrap-text",
+    "-t",
+    "2",
+    "-l",
+    "80",
+] }
+auto-format = true
+
+[language-server.helix-assist]
+command = "helix-assist"
+
+[[language]]
+name = "bibtex"
+formatter = { command = "bibtex-tidy", args = [
+    "--tab",
+    "--sort=-year,name",
+    "--omit=urldate,file,keywords,langid,abstract",
+    "--merge=combine",
+    "--drop-all-caps",
+    "--sort-fields",
+    "--strip-comments",
+    "--max-authors=5",
+] }
+auto-format = true
+
+[[language]]
+name = "latex"
+formatter = { command = "tex-fmt", args = ["--stdin"] }
+auto-format = true
+
+[[language]]
+name = "dockerfile"
+formatter = { command = "dockerfmt", args = ["-n", "-i", "2"] }
+auto-format = true
+
+[[language]]
+name = "docker-compose"
+auto-format = true
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+
+[[language]]
+name = "typst"
+formatter = { command = "typstyle", args = [
+    "--wrap-text",
+    "-t",
+    "2",
+    "-l",
+    "80",
+] }
+auto-format = true
+
+[[language]]
+name = "ledger"
+formatter = { command = "hledger", args = [
+    "--no-diff",
+    "--exit-zero-on-changes",
+    "-",
+] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
+
+[[language]]
+name = "scss"
+formatter = { command = 'prettier', args = ["--parser", "scss"] }
+auto-format = true
+
+[[language]]
+name = "fish"
+formatter = { command = "fish_indent" }
+auto-format = true
+
+[[language]]
+name = "bash"
+indent = { tab-width = 4, unit = " " }
+formatter = { command = 'shfmt', args = ["-i", "0", "-ci"] }
+auto-format = true
+
+[[language]]
+name = "yaml"
+file-types = ["yml", "yaml"]
+formatter = { command = "yamlfmt", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+auto-format = true
+
+[[language]]
+name = "python"
+formatter = { command = "ruff", args = ["format", "--line-length", "80", "-"] }
+language-servers = ["ruff"]
+auto-format = true
+
+[[language]]
+name = "c"
+file-types = ["c", "h"]
+formatter = { command = 'clang-format' }
+indent = { tab-width = 4, unit = ' ' }
+auto-format = true
+
+[[language]]
+name = "cpp"
+file-types = ["cpp", "cc", "cxx", "hpp", "hcc", "hxx"]
+formatter = { command = 'clang-format' }
+indent = { tab-width = 4, unit = ' ' }
+auto-format = true
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true

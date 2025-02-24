@@ -1,0 +1,32 @@
+bind index,pager g noop
+bind index,pager r group-chat-reply
+
+bind pager H display-toggle-weed
+bind pager h exit
+bind pager k previous-line
+bind pager j next-line
+bind pager gg top
+bind pager ge bottom
+
+bind pager \Cu half-up
+bind pager \Cd half-down
+
+macro index h <change-folder>?
+# Restrict this shortcut to HTML handlers even when the attachment search fails.
+macro index,pager O "<enter-command>set my_html_mailcap_path=\$mailcap_path mailcap_path=~/.mutt/mailcap<Enter><view-attachments><first-entry><search>\\[text/html[, ]<Enter><view-mailcap><exit><enter-command>set mailcap_path=\$my_html_mailcap_path; unset my_html_mailcap_path<Enter>" "open HTML in Firefox"
+bind attach O view-mailcap
+macro index,pager o "<pipe-message> urlscan<Enter>" "extract links out of a message"
+
+bind index k previous-entry
+bind index j next-entry
+bind index l display-message
+bind index \Cu half-up
+bind index \Cd half-down
+
+bind browser l select-entry
+
+set query_command = "abook --mutt-query '%s'"
+macro index,pager A "<pipe-message>abook --add-email<enter>" "add sender to abook"
+
+bind index ge last-entry
+bind index gg first-entry

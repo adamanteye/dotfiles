@@ -1,0 +1,37 @@
+session_name: default
+windows:
+  - window_name: juno
+    start_directory: ~/j
+    panes:
+      - null
+  - window_name: sk
+    start_directory: ~/sk
+    panes:
+      - null
+  - window_name: email
+    panes:
+      - null
+  - window_name: tjjk
+    start_directory: ~/t
+    panes:
+      - null
+  - window_name: blog
+    start_directory: ~/i/blog
+    panes:
+      - null
+      - python -m http.server -b ::1 -d build 8964&; while inotifywait -q -e modify -e delete -r src/; make LIVE=y; end
+    layout: main-horizontal
+    options:
+      main-pane-height: 90%
+  - window_name: meet
+    start_directory: ~/t/meet
+    panes:
+      - null
+      - python -m http.server -b ::1 -d build 8965&; while inotifywait -q -e modify -e delete -r src/; make LIVE=y pdf; end
+    layout: main-horizontal
+    options:
+      main-pane-height: 90%
+  - window_name: self
+    start_directory: ~/i
+    panes:
+      - null

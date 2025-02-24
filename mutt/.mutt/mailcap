@@ -1,0 +1,5 @@
+# Open HTML directly: xdg-open can misidentify HTML fragments as text/plain.
+text/html; /usr/bin/firefox-esr %s; nametemplate=%s.html
+
+# Only the text renderer produces output for NeoMutt's pager.
+text/html; /usr/bin/w3m -I %{charset} -O utf-8 -T text/html -dump -o display_link_number=1 -cols ${COLUMNS:-80} %s; copiousoutput; nametemplate=%s.html

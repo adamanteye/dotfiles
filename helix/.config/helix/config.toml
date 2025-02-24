@@ -1,0 +1,41 @@
+theme = "base16_terminal"
+
+[editor]
+shell = ["fish", "c"]
+line-number = "relative"
+cursorline = true
+color-modes = true
+auto-format = true
+true-color = true
+middle-click-paste = false
+bufferline = "always"
+text-width = 80
+completion-replace = true
+auto-pairs = false
+insert-final-newline = true
+default-line-ending = "lf"
+trim-trailing-whitespace = true
+trim-final-newlines = true
+
+[editor.statusline]
+left = ["mode", "read-only-indicator", "spinner", "version-control"]
+center = ["file-absolute-path", "total-line-numbers"]
+right = [
+    "diagnostics",
+    "selections",
+    "position",
+    "file-encoding",
+    "file-line-ending",
+    "file-type",
+]
+separator = "│"
+
+[editor.smart-tab]
+enable = false
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+[editor.indent-guides]
+render = true

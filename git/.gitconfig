@@ -1,0 +1,63 @@
+[user]
+	name = Xuelin Yang
+	email = xuelin@adamanteye.cc
+	signingKey = FC7551A077C73C717228569550DFEB73EC767C31!
+[commit]
+	gpgsign = true
+	template = ~/.git-template/commit-msg
+	verbose = true
+[tag]
+	sort = version:refname
+[alias]
+	ss = status
+	kmt = commit
+	chk = checkout
+	ol = log --oneline --decorate --all --graph --color
+	st = log --pretty=short --decorate --all --graph --color
+	lg = log --color --show-signature
+	br = branch -vv --all
+	ps = push
+	pl = pull
+	df = diff
+	ds = diff --staged
+	wt = worktree
+	wl = worktree list
+	kl = clone
+	sl = clone --depth 1 --no-checkout --filter="tree:0"
+	fp = format-patch
+	cp = cherry-pick
+	rb = rebase
+[rebase]
+	autoSquash = true
+	updateRefs = true
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[init]
+	defaultBranch = master
+	templateDir = ~/.git-template/repo-template/
+[core]
+	quotepath = false
+	eol = lf
+[color]
+	ui = true
+	pager = true
+[diff]
+	algorithm = histogram
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[format]
+	signOff = true
+[sendemail]
+	annotate = yes
+[protocol]
+	version = 2
+[push]
+	autoSetupRemote = true
+	followTags = true
+	default = upstream

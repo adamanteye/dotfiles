@@ -1,0 +1,10 @@
+[Unit]
+Description=Xray Service
+After=network.target nss-lookup.target
+
+[Service]
+ExecStart=/usr/bin/xray run -c %h/.config/xray/config.json
+Restart=on-abort
+
+[Install]
+WantedBy=default.target

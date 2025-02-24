@@ -1,0 +1,137 @@
+include /etc/sway/config.d/*
+
+xwayland enable
+set $mod Super
+set $term footclient
+set $menu wofi
+set $browser firefox-esr
+
+bindsym $mod+D kill
+bindsym $mod+P exec sway exit
+bindsym $mod+T exec $term
+bindsym $mod+B exec $browser
+bindsym $mod+Z exec zotero --profile "$HOME/.zotero/zotero/xuelin.default"
+bindsym $mod+I exec code
+bindsym $mod+M exec Telegram
+bindsym $mod+R exec $menu
+bindsym $mod+V exec cliphist list | $menu --dmenu | cliphist decode | wl-copy
+bindsym $mod+W exec $browser https://szfilehelper.weixin.qq.com/
+bindsym $mod+Q exec zotero --profile "$HOME/.zotero/zotero/tjjk.default"
+# output toggle is an expensive, blocking operation in sway.
+# The binding is triggered on key press, and sway blocks while waiting
+# for the toggle to complete. During this time, the key release event
+# may not be processed in time, causing sway to incorrectly consider
+# the key as still pressed and generate a repeat.
+bindsym --no-repeat $mod+U output "BOE NV140WUM-N4H Unknown" toggle
+bindsym $mod+N exec $term newsboat
+bindsym $mod+O exec swaylock --ignore-empty-password -i $HOME/.local/share/wallpaper/bg.png
+
+bindsym $mod+Shift+C reload
+
+bindsym $mod+Right resize shrink width 10px
+bindsym $mod+Down resize grow height 10px
+bindsym $mod+Up resize shrink height 10px
+bindsym $mod+Left resize grow width 10px
+
+bindsym $mod+Shift+S exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
+bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
+
+# output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
+# output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.125 pos 1920 0 res 1920x1080@60Hz
+output "BOE NV140WUM-N4H Unknown" scale 1
+output "AD electronics G24L22S 0x00000006" transform 270
+# chep
+output 'Philips Consumer Electronics Company PHL24E1N5500 UK02322053624' pos 0 0
+
+exec swaybg -i $HOME/.local/share/wallpaper/bg.png
+exec foot --server
+exec mako
+exec rm -f $HOME/.cache/cliphist/db
+exec fcitx5 -d
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+
+bindsym --locked XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-
+bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+
+bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+# Special keys to adjust brightness via brightnessctl
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2.5%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+
+bindsym $mod+H focus left
+bindsym $mod+L focus right
+bindsym $mod+J focus down
+bindsym $mod+K focus up
+
+bindsym $mod+F fullscreen
+
+# Switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+font "Source Code Pro" Regular 12
+
+input "type:pointer" {
+    pointer_accel 0.7
+}
+
+input "type:touchpad" {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+    pointer_accel 1.0
+}
+
+input "type:keyboard" {
+    xkb_layout us
+    repeat_delay 250
+    repeat_rate 80
+}
+
+set {
+    $col_urgent                   #af3a03
+    $col_focused                  #f2e5bc
+    $col_unfocused                #282828
+    $col_focused_inactive         #665c54
+    $col_text_dark                #504945
+    $col_text_light               #bdae93
+    $col_text_lightest            #fbf1c7
+    $col_urgent_border            #7c6f64
+    $col_focused_border           #ebdbb2
+    $col_unfocused_border         #3c3836
+    $col_focused_inactive_border  #7c6f64
+}
+
+client.focused $col_focused_border $col_focused $col_text_dark $col_focused $col_focused_border
+client.focused_inactive $col_focused_inactive_border $col_focused_inactive $col_text_lightest $col_focused_inactive $col_focused_inactive_border
+client.unfocused $col_unfocused_border $col_unfocused $col_text_light $col_unfocused $col_unfocused_border
+client.urgent $col_urgent_border $col_urgent $col_text_lightest $col_urgent $col_urgent_border
+
+bar {
+    position top
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while xuelin-bar; do sleep 20; done
+}
