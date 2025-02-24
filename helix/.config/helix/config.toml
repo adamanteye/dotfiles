@@ -9,6 +9,7 @@ true-color = true
 middle-click-paste = false
 bufferline = "always"
 text-width = 80
+completion-replace = true
 
 [editor.statusline]
 left = ["mode", "read-only-indicator", "spinner", "version-control"]
