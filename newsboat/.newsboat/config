@@ -1,0 +1,3 @@
+include ~/.newsboat/dark
+auto-reload yes
+reload-threads 100

@@ -1,6 +1,9 @@
 alias hx='helix'
 alias c='clear'
 alias h='Hyprland'
+alias mutt='neomutt'
+alias news='newsboat'
+
 alias l='ls'
 alias ls='ls --color=auto'
 alias la='ls -A'
