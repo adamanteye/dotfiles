@@ -6,16 +6,9 @@
   "tray": {
     "spacing": 10,
   },
-  "modules-left": [
-    "tray",
-    "battery",
-    "cpu",
-    "disk",
-    "temperature",
-    "backlight",
-  ],
+  "modules-left": ["tray", "cpu", "disk", "temperature", "backlight"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["pulseaudio", "network", "clock"],
+  "modules-right": ["pulseaudio", "network", "clock", "battery"],
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -57,7 +50,7 @@
 
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["", ""],
   },
   "pulseaudio": {
