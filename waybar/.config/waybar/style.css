@@ -12,7 +12,7 @@
 }
 
 window#waybar {
-  background-color: @crust;
+  background-color: alpha(@base, 0.6);
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -27,7 +27,7 @@ window#waybar.hidden {
 
 #workspaces button {
   color: @text;
-  background: @background3;
+  background: @base;
   border-radius: 8px;
   padding: 0px 10px 0px 10px;
   margin: 7px 5px 10px 5px;
