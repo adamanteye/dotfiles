@@ -1,0 +1,4 @@
+set folder = "~/Mail/gmail"
+set spoolfile = +Inbox
+set postponed = +Drafts
+set record = +Sent
