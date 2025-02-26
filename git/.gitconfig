@@ -5,18 +5,26 @@
 [commit]
 	gpgsign = true
 	template = /home/adamanteye/.gitmessage
+	verbose = true
 [tag]
 	gpgSign = true
+	sort = version:refname
 [alias]
 	ss = status
 	st = stash
 	kmt = commit
-	kmta = commit -a
 	chk = checkout
 	br = branch
 	ps = push
 	pl = pull
 	df = diff
+[rebase]
+	autoSquash = true
+	updateRefs = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
 [init]
 	defaultBranch = master
 [core]
@@ -31,3 +39,9 @@
 	pager = false
 [pull]
 	rebase = true
+[diff]
+	algorithm = histogram
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
