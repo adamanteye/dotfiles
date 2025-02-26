@@ -1,1 +1,1 @@
-mailboxes "+gmail/bak.drafts" "+gmail/bak.flagged" "+gmail/bak.important" "+gmail/bak.sent" "+gmail/bak.spam" "+gmail/bak.trash" "+gmail/inbox" "+tsinghua/Drafts" "+tsinghua/INBOX" "+tsinghua/Junk E-mail" "+tsinghua/Sent" "+tsinghua/Sent Items" "+tsinghua/Trash" "+tsinghua/Virus Items"
+mailboxes "+gmail/INBOX" "+gmail/[Gmail].Drafts" "+gmail/[Gmail].Sent Mail" "+gmail/[Gmail].Spam" "+gmail/[Gmail].Trash" "+tsinghua/Drafts" "+tsinghua/INBOX" "+tsinghua/Sent Items" "+tsinghua/Trash"
