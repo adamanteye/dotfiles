@@ -3,29 +3,36 @@
 
 # Edited by adamanteye
 
-# Default Folder
-set spoolfile=+gmail/INBOX
-
 # Folders
 set mbox_type=Maildir
 set folder=$HOME/Mail
 source ~/.mutt/mailboxes
-folder-hook tsinghua 'set from=yangzheh22@mails.tsinghua.edu.cn realname=杨哲涵 postponed=+tsinghua/Drafts record=+tsinghua/Sent\ Items'
-folder-hook gmail 'set from=yangzheh22@gmail.com realname=Zhehan\ Yang postponed=+gmail/[Gmail]/Drafts record=+gmail/[Gmail].Sent\ Mail'
+folder-hook tsinghua 'source ~/.mutt/tsinghua.hook'
+folder-hook gmail 'source ~/.mutt/gmail.hook'
+
+# Default Folder
+set spoolfile=+tsinghua/INBOX
 
 # Switch
 set sidebar_visible = yes
 
 # Date Format
-
+# https://neomutt.org/feature/cond-date
 set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M]&%[%m-%d]>&%[%m-%d]>&%[%y/%m]> %-15.15L (%<l?%4l&%4c>) %s'
+
+# Attachment
+# https://neomutt.org/feature/forgotten-attachment
+set abort_noattach=ask-yes
+# English: attach, attached, attachment, attachments
+set abort_noattach_regex="\\<attach(|ed|ments?)\\>"
 
 # SMTP
 set sendmail=/usr/bin/msmtp
 
 # Notify
+set check_new
 set mail_check_stats
-set new_mail_command='notify-send -t 0 New Mail!'
+set new_mail_command='notify-send -t 5000 Mutt "new mails in %b mailboxes"'
 
 # Sorting
 set sort=threads

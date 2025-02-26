@@ -1,0 +1,4 @@
+set from="杨哲涵 <yangzheh22@mails.tsinghua.edu.cn>"
+set spoolfile=+tsinghua/INBOX
+set postponed=+tsinghua/Drafts
+set record=+tsinghua/Sent\ Items

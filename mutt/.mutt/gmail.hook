@@ -1,0 +1,4 @@
+set from="Zhehan Yang <yangzheh22@gmail.com>"
+set spoolfile=+gmail/INBOX
+set postponed=+gmail/[Gmail]/Drafts
+set record=+gmail/[Gmail].Sent\ Mail

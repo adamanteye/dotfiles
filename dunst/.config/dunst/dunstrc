@@ -3,6 +3,7 @@ frame_color = "#8aadf4"
 separator_color= frame
 highlight = "#8aadf4"
 follow = keyboard
+font = "LXGWBrightCodeTC 12"
 
 [urgency_low]
 background = "#24273a"
