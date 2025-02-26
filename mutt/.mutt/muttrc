@@ -13,12 +13,19 @@ source ~/.mutt/mailboxes
 folder-hook tsinghua 'set from=yangzheh22@mails.tsinghua.edu.cn realname=杨哲涵 postponed=+tsinghua/Drafts record=+tsinghua/Sent\ Items'
 folder-hook gmail 'set from=yangzheh22@gmail.com realname=Zhehan\ Yang postponed=+gmail/[Gmail]/Drafts record=+gmail/[Gmail].Sent\ Mail'
 
+# Switch
+set sidebar_visible = yes
+
+# Date Format
+
+set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M]&%[%m-%d]>&%[%m-%d]>&%[%y/%m]> %-15.15L (%<l?%4l&%4c>) %s'
+
 # SMTP
 set sendmail=/usr/bin/msmtp
 
 # Notify
 set mail_check_stats
-set new_mail_command="notify-send --icon='/usr/share/pixmaps/neomutt.xpm' '%b boxes get new mails' &"
+set new_mail_command='notify-send -t 0 New Mail!'
 
 # Sorting
 set sort=threads
@@ -35,9 +42,14 @@ set forward_quote = yes # forward message would be quoted
 set pager_stop
 
 # Bind
-bind index g noop
+bind index,pager g noop
 bind index ge last-entry
 bind index gg first-entry
+bind pager gg top
+bind pager ge bottom
+bind index,pager gp sidebar-prev
+bind index,pager gn sidebar-next
+bind index,pager go sidebar-open 
 
 # Color
 color normal      default default         # Text is "Text"

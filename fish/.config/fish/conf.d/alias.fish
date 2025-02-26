@@ -3,6 +3,7 @@ alias c='clear'
 alias h='Hyprland'
 alias mutt='neomutt'
 alias news='newsboat'
+alias g='git'
 
 alias l='ls'
 alias ls='ls --color=auto'
