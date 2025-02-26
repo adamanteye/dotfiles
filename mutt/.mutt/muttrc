@@ -1,13 +1,24 @@
 # Minimal Configuration of Mutt under the condition
 # of https://github.com/ZenithalHourlyRate/muttrc
+
 # Edited by adamanteye
 
-source ~/.mutt/mailboxes
-folder-hook tsinghua set from="yangzheh22@mails.tsinghua.edu.cn"
-folder-hook gmail set from="yangzheh22@gmail.com"
+# Default Folder
+set spoolfile=+gmail/INBOX
+
+# Folders
 set mbox_type=Maildir
 set folder=$HOME/Mail
-set spoolfile=+tsinghua/INBOX
+source ~/.mutt/mailboxes
+folder-hook tsinghua 'set from=yangzheh22@mails.tsinghua.edu.cn realname=杨哲涵 postponed=+tsinghua/Drafts record=+tsinghua/Sent\ Items'
+folder-hook gmail 'set from=yangzheh22@gmail.com realname=Zhehan\ Yang postponed=+gmail/[Gmail]/Drafts record=+gmail/[Gmail].Sent\ Mail'
+
+# SMTP
+set sendmail=/usr/bin/msmtp
+
+# Notify
+set mail_check_stats
+set new_mail_command="notify-send --icon='/usr/share/pixmaps/neomutt.xpm' '%b boxes get new mails' &"
 
 # Sorting
 set sort=threads
