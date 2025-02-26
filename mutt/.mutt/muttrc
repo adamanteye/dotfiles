@@ -2,6 +2,13 @@
 # of https://github.com/ZenithalHourlyRate/muttrc
 # Edited by adamanteye
 
+source ~/.mutt/mailboxes
+folder-hook tsinghua set from="yangzheh22@mails.tsinghua.edu.cn"
+folder-hook gmail set from="yangzheh22@gmail.com"
+set mbox_type=Maildir
+set folder=$HOME/Mail
+set spoolfile=+tsinghua/INBOX
+
 # Sorting
 set sort=threads
 set sort_browser=date
@@ -16,14 +23,10 @@ set forward_quote = yes # forward message would be quoted
 # For pager
 set pager_stop
 
-# All folders
-
-source "~/.config/mutt/muttrc.d/tsinghua"
-
-source "~/.config/mutt/muttrc.d/gmail"
-
 # Bind
 bind index g noop
+bind index ge last-entry
+bind index gg first-entry
 
 # Color
 color normal      default default         # Text is "Text"

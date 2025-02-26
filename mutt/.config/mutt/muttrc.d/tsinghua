@@ -1,5 +1,0 @@
-set folder = "~/Mail/tsinghua"
-set spoolfile = +Inbox
-set postponed = +Drafts
-set record = +"Sent Items"
-folder-hook $folder 'source ~/.config/mutt/muttrc.d/tsinghua'
