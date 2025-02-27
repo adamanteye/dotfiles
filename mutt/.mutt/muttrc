@@ -13,8 +13,11 @@ folder-hook gmail 'source ~/.mutt/gmail.hook'
 # Default Folder
 set spoolfile=+tsinghua/INBOX
 
+# No Ask for Confirmation
+set delete=yes
+
 # Switch
-set sidebar_visible = yes
+set sidebar_visible=yes
 
 # Date Format
 # https://neomutt.org/feature/cond-date
@@ -32,7 +35,7 @@ set sendmail=/usr/bin/msmtp
 # Notify
 set check_new
 set mail_check_stats
-set new_mail_command='notify-send -t 5000 Mutt "new mails in %b mailboxes"'
+set new_mail_command='notify-send -t 5000 Mutt "new mails in %b mailboxes" && paplay /usr/share/sounds/freedesktop/stereo/bell.oga'
 
 # Sorting
 set sort=threads
@@ -42,8 +45,8 @@ set sort_aux=reverse-last-date-received
 # For compose
 set autoedit            # skip editing headers when compose mail
 set reverse_name        # reply with received email
-set include = yes       # include the original mail in reply
-set forward_quote = yes # forward message would be quoted
+set include=yes         # include the original mail in reply
+set forward_quote=yes   # forward message would be quoted
 
 # For pager
 set pager_stop
@@ -54,9 +57,6 @@ bind index ge last-entry
 bind index gg first-entry
 bind pager gg top
 bind pager ge bottom
-bind index,pager gp sidebar-prev
-bind index,pager gn sidebar-next
-bind index,pager go sidebar-open 
 
 # Color
 color normal      default default         # Text is "Text"
