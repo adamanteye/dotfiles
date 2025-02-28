@@ -7,9 +7,9 @@
     "spacing": 10,
   },
   "modules-left": ["tray", "cpu", "disk", "temperature", "backlight"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["sway/workspaces"],
   "modules-right": ["pulseaudio", "network", "clock", "battery"],
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
@@ -40,14 +40,12 @@
     "format": "  {usage}%",
     "max-length": 10,
   },
-
   "temperature": {
     "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
     "input-filename": "temp1_input",
     "format": " {temperatureC}°C",
     "on-click": "psensor",
   },
-
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent}%",

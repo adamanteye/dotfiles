@@ -2,3 +2,5 @@ include ~/.newsboat/dark
 auto-reload yes
 reload-threads 100
 browser "firefox %u"
+use-proxy yes
+proxy [::1]:10801

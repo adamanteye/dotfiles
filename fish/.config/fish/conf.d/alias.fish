@@ -1,6 +1,6 @@
 alias hx='helix'
 alias c='clear'
-alias h='Hyprland'
+alias s='sway'
 alias mutt='neomutt'
 alias news='newsboat'
 alias g='git'
