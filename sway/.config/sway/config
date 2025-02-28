@@ -1,12 +1,13 @@
 set $mod Super
 bindsym $mod+D kill
+bindsym $mod+P exec sway exit
+bindsym $mod+L exec telegram-desktop
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
 bindsym $mod+E exec $file
 bindsym $mod+Z exec zotero
 bindsym $mod+I exec code
 bindsym $mod+M exec $term neomutt
-bindsym $mod+P exec sway exit
 bindsym $mod+R exec $menu
 bindsym $mod+V exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bindsym $mod+W exec $browser 'https://szfilehelper.weixin.qq.com/'
@@ -64,6 +65,8 @@ bindsym $mod+Shift+0 move container to workspace number 10
 font "LXGW Bright Code TC" Regular 12
 
 input "type:touchpad" {
+    dwt enabled
+    tap enabled
     pointer_accel 1.0
 }
 
