@@ -7,12 +7,12 @@ bindsym $mod+Z exec zotero
 bindsym $mod+I exec code
 bindsym $mod+M exec $term neomutt
 bindsym $mod+P exec sway exit
-bindsym $Mod+R exec $menu
-bindsym $Mod+V exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
-bindsym $Mod+W exec $browser 'https://szfilehelper.weixin.qq.com/'
-bindsym $Mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
-bindsym $Mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
-bindsym $Mod+N exec $term newsboat
+bindsym $mod+R exec $menu
+bindsym $mod+V exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+bindsym $mod+W exec $browser 'https://szfilehelper.weixin.qq.com/'
+bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
+bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
+bindsym $mod+N exec $term newsboat
 
 set $term footclient
 set $menu wofi --conf $HOME/.config/wofi/config --style $HOME/.config/wofi/style.css
