@@ -15,13 +15,16 @@ bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
 bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
 bindsym $mod+N exec $term newsboat
 
+bindsym $mod+Shift+S exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshot/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
+
 set $term footclient
 set $menu wofi --conf $HOME/.config/wofi/config --style $HOME/.config/wofi/style.css
 set $browser firefox
 set $file "$term yazi"
 
-output eDP-1 scale 1.2 res 1920x1080@40.005Hz position 0,0 bg $HOME/.config/sway/catppuccin-custom-darker-corners.png stretch
+output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.2 mode 1920x1080@40.005Hz position 0,0
 
+exec swaybg -i $HOME/.config/sway/catppuccin-custom-darker-corners.png
 exec foot --server
 exec waybar
 exec rm -f $HOME/.cache/cliphist/db
