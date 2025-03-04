@@ -15,6 +15,13 @@ bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
 bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
 bindsym $mod+N exec $term newsboat
 
+bindsym $mod+Shift+C reload
+
+bindsym $mod+Right resize shrink width 10px
+bindsym $mod+Down resize grow height 10px
+bindsym $mod+Up resize shrink height 10px
+bindsym $mod+Left resize grow width 10px
+
 bindsym $mod+Shift+S exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshot/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 
 set $term footclient
