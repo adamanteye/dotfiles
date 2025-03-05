@@ -74,6 +74,10 @@ bindsym $mod+Shift+0 move container to workspace number 10
 
 font "LXGW Bright Code TC" Regular 12
 
+input "type:pointer" {
+    pointer_accel 0.7
+}
+
 input "type:touchpad" {
     dwt enabled
     tap enabled
