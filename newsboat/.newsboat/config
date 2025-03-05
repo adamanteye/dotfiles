@@ -4,3 +4,4 @@ reload-threads 100
 browser "firefox %u"
 use-proxy yes
 proxy [::1]:10801
+datetime-format "%Y-%m-%d"
