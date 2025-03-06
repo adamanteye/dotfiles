@@ -5,3 +5,6 @@ browser "firefox %u"
 use-proxy yes
 proxy [::1]:10801
 datetime-format "%Y-%m-%d"
+
+# killfiles
+ignore-article "https://rustcc.cn/rss" "title !~ \"【Rust日报】\""
