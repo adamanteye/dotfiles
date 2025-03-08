@@ -24,6 +24,9 @@ alias ip='sudo ip --color=auto'
 alias journalctl='sudo journalctl'
 alias dmesg='sudo dmesg'
 
+alias weather-beijing='curl wttr.in/beijing'
+alias weather-yinchuan='curl wttr.in/yinchuan'
+
 alias debian-builder='docker run -it --rm --name debian --network host -e HTTP_PROXY=http://[::1]:10801 -v "$HOME/Documents/debian:/home/debian:rw" -v "/etc/wgetrc:/etc/wgetrc:ro" -e DEBFULLNAME -e DEBEMAIL ghcr.io/adamanteye/debian-builder:master'
 
 alias setproxy='export all_proxy=http://[::1]:10801'
