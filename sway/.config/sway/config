@@ -1,3 +1,5 @@
+include /etc/sway/config.d/*
+
 set $mod Super
 bindsym $mod+D kill
 bindsym $mod+P exec sway exit
