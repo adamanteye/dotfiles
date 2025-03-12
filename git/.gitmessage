@@ -1,8 +1,8 @@
 
-
-
 # BREAKING CHANGE: 
 #
+# co-authored-by: name <name@example.com>
+# co-authored-by: ANOTHER-NAME <ANOTHER-NAME@EXAMPLE.COM>"
 #
 # fix: a commit of the type fix patches a bug in your codebase
 # (this correlates with PATCH in Semantic Versioning).

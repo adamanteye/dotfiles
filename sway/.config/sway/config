@@ -1,6 +1,6 @@
 include /etc/sway/config.d/*
 
-set $mod Super
+set $mod Mod4
 bindsym $mod+D kill
 bindsym $mod+P exec sway exit
 bindsym $mod+L exec telegram-desktop
