@@ -7,5 +7,5 @@
 执行:
 
 ```sh
-for i in $(ls -d */); do stow --target="$HOME" $i"; done
+for i in $(ls -d */); do stow --target="$HOME" "$i"; done
 ```

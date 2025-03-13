@@ -110,7 +110,7 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "never"
+    center-focused-column "on-overflow"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -147,8 +147,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        // off
-
+        off
         // How many logical pixels the ring extends out from the windows.
         width 2
 
@@ -181,16 +180,21 @@ layout {
 
     // You can also add a border. It's similar to the focus ring, but always visible.
     border {
-        // The settings are the same as for the focus ring.
-        // If you enable the border, you probably want to disable the focus ring.
-        off
+        // off
+        width 2
+        // width 128
 
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        // active-color "#f38ba8"
+        // inactive-color "#585b70"
 
-        // active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#f38ba8" to="#f9e2af" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#585b70" to="#7f849c" angle=45 relative-to="workspace-view"
+
+        // inactive-gradient from="green" to="lightblue" angle=45 relative-to="workspace-view"
+        // active-gradient from="#f00" to="#0f0" angle=90
+
+        // active-gradient from="yellow" to="red" angle=45 relative-to="workspace-view"
+        // inactive-gradient from="yellow" to="red" angle=45
     }
 
     // You can enable drop shadows for windows.
@@ -249,9 +253,6 @@ layout {
 // See the binds section below for more spawn examples.
 spawn-at-startup "foot" "--server"
 spawn-at-startup "fcitx5" "-d"
-spawn-at-startup "swaybg" "-i" "$HOME/.config/niri/catppuccin-custom-darker-corners.png"
-spawn-at-startup "dunst"
-spawn-at-startup "waybar"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
