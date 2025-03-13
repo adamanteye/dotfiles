@@ -7,15 +7,12 @@
     "spacing": 10,
   },
   "modules-left": ["tray", "cpu", "disk", "temperature", "backlight"],
-  "modules-center": ["sway/workspaces"],
+  "modules-center": ["niri/workspaces"],
   "modules-right": ["pulseaudio", "network", "clock", "battery"],
-  "sway/workspaces": {
-    "disable-scroll": true,
+  "niri/workspaces": {
     "all-outputs": true,
-    "on-click": "activate",
-    "format": "{name}: {icon}",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "disable-click": true,
+    "format": "{value}: {icon}",
     "format-icons": {
       "1": "",
       "2": "",
@@ -27,7 +24,7 @@
       "9": "",
       "10": "",
       "urgent": "",
-      "focused": "",
+      "active": "",
       "default": "",
     },
   },

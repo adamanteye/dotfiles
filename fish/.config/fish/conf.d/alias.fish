@@ -1,6 +1,6 @@
 alias hx='helix'
 alias c='clear'
-alias s='sway'
+alias n='niri-session'
 alias mutt='neomutt'
 alias news='newsboat'
 alias g='git'
