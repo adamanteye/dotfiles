@@ -10,16 +10,11 @@ if status is-interactive
 end
 
 function fish_greeting
-    fortune chinese
+    fortune tang300
 end
 
 if not contains "$HOME/.local/bin" $PATH
     set -x PATH "$HOME/.local/bin" $PATH
-end
-
-# tunet_bash
-if not contains "$HOME/.tunet_bash" $PATH
-    set -x PATH "$HOME/.tunet_bash" $PATH
 end
 
 # rustup
