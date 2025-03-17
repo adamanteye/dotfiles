@@ -252,6 +252,9 @@ layout {
 // See the binds section below for more spawn examples.
 spawn-at-startup "foot" "--server"
 spawn-at-startup "fcitx5" "-d"
+spawn-at-startup "wl-paste --type text --watch cliphist store"
+spawn-at-startup "wl-paste --type image --watch cliphist store"
+spawn-at-startup "rm -f ~/.cache/cliphist/db"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -290,7 +293,7 @@ binds {
     // Most actions that you can bind here can also be invoked programmatically with
     // `niri msg action do-something`.
     Mod+H { show-hotkey-overlay; }
-
+    Mod+V { spawn "show_cliphist"; }
     Mod+B { spawn "firefox"; }
     Mod+T { spawn "footclient"; }
     Mod+E { spawn "footclient" "yazi"; }
@@ -457,7 +460,7 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
+    // Mod+V       { toggle-window-floating; }
     Mod+J { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
