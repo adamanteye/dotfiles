@@ -4,7 +4,7 @@
 	signingKey = FC012E34C8FFF4AB
 [commit]
 	gpgsign = true
-	template = /home/adamanteye/.gitmessage
+	template = ~/.git-template/commit-msg
 	verbose = true
 [tag]
 	gpgSign = true
@@ -27,6 +27,7 @@
 	all = true
 [init]
 	defaultBranch = master
+	templateDir = ~/.git-template/repo-template/
 [core]
 	quotepath = false
 	pager = bat --style=plain
