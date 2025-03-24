@@ -1,5 +1,9 @@
 alias hx='helix'
 alias c='clear'
+
+alias kmt='send-heartbeat "signing git commit" && git commit'
+alias pass='send-heartbeat "managing password" && /usr/bin/pass'
+alias zotero='send-heartbeat "openning zotero" && /usr/bin/zotero'
 alias n='send-heartbeat "booting laptop" && /usr/bin/niri-session'
 alias mutt='send-heartbeat "reading emails" && neomutt'
 alias news='send-heartbeat "reading RSS" && newsboat'
