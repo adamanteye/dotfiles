@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+action=${HEARTBEAT_ACTION:-active}
+if [[ $action == "active" ]]; then
+    source $HOME/.cache/heartbeat/token
+    device="$(uname --kernel-name) $(uname --kernel-release)"
+    curl -X POST \
+        -H "Content-Type: application/json" \
+        -d "{\"source\": \"$device\", \"event\": \"$1\", \"note\": \"$2\", \"token\": \"$HEARTBEAT_TOKEN\"}" \
+        https://heartbeat.adamanteye.cc
+fi
