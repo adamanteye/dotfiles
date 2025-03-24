@@ -296,9 +296,9 @@ binds {
     Mod+B { spawn "firefox"; }
     Mod+T { spawn "footclient"; }
     Mod+E { spawn "footclient" "yazi"; }
-    Mod+N { spawn "footclient" "newsboat"; }
-    Mod+M { spawn "footclient" "neomutt"; }
-    Mod+L { spawn "telegram-desktop"; }
+    Mod+N { spawn "fish" "--command" "footclient fish --command news"; }
+    Mod+M { spawn "fish" "--command" "footclient fish --command mutt"; }
+    Mod+L { spawn "fish" "--command" "telegram-desktop"; }
     Mod+Z { spawn "zotero"; }
     Mod+I { spawn "code"; }
     Mod+W { spawn "firefox" "https://szfilehelper.weixin.qq.com/"; }
