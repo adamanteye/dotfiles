@@ -18,6 +18,7 @@
 	ps = push
 	pl = pull
 	df = diff
+	cl = clone
 	undo = reset --soft HEAD~1
 [rebase]
 	autoSquash = true
