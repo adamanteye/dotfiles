@@ -1,5 +1,6 @@
 set from="Zhehan Yang <yangzheh22@gmail.com>"
 set spoolfile=+gmail/INBOX
 set postponed=+gmail/[Gmail].Drafts
-set record=+gmail/[Gmail].Sent\ Mail
+# see https://github.com/LukeSmithxyz/mutt-wizard/issues/333
+set record=/dev/null
 set trash=+gmail/[Gmail].Trash
