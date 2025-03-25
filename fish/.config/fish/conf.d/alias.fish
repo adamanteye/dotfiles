@@ -1,9 +1,11 @@
 alias hx='helix'
 alias c='clear'
 
+alias bluetoothctl='send-heartbeat "manage bluetooth device" && /usr/bin/bluetoothctl'
+alias docker='send-heartbeat "mess around with docker" && /usr/bin/docker'
 alias kmt='send-heartbeat "sign git commit" && git commit'
 alias pass='send-heartbeat "manage password" && /usr/bin/pass'
-alias zotero='send-heartbeat "open zotero" && /usr/bin/zotero'
+alias zotero='send-heartbeat "browse library in zotero" && /usr/bin/zotero'
 alias n='send-heartbeat "boot laptop" && /usr/bin/niri-session'
 alias mutt='send-heartbeat "check emails" && neomutt'
 alias news='send-heartbeat "read RSS feeds" && newsboat'
