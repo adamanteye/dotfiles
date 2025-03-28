@@ -48,5 +48,8 @@
     "editor.fontSize": 15,
     "files.insertFinalNewline": true,
     "notebook.insertFinalNewline": true,
-    "ruff.nativeServer": "on"
+    "ruff.nativeServer": "on",
+    "cSpell.userWords": [
+        "adamanteye"
+    ]
 }

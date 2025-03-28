@@ -52,6 +52,17 @@ set forward_quote=yes   # forward message would be quoted
 set pager_stop
 
 # Bind
+
+bind pager h display-toggle-weed
+bind pager j previous-line
+bind pager k next-line
+bind index h previous-entry
+bind index l next-entry
+bind index \Cu half-up
+bind pager \Cu half-up
+bind index \Cd half-down
+bind pager \Cd half-down
+
 bind index,pager g noop
 bind index ge last-entry
 bind index gg first-entry

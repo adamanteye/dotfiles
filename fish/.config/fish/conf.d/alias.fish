@@ -1,6 +1,7 @@
 alias hx='helix'
 alias c='clear'
 
+alias makepkg='send-heartbeat "package for AUR" && /usr/bin/makepkg'
 alias bluetoothctl='send-heartbeat "manage bluetooth device" && /usr/bin/bluetoothctl'
 alias docker='send-heartbeat "mess around with docker" && /usr/bin/docker'
 alias kmt='send-heartbeat "sign git commit" && git commit'
@@ -28,7 +29,7 @@ alias rm='rm -vi'
 
 alias ssh='send-heartbeat "initiate SSH connection" && /usr/bin/ssh'
 alias poweroff='send-heartbeat "shut down laptop" && /usr/bin/poweroff'
-alias pacman='send-heartbeat "run pacman" && sudo pacman'
+alias pacman='sudo pacman'
 
 alias systemctl='sudo systemctl'
 alias ip='sudo ip --color=auto'
