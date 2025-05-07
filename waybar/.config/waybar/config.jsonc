@@ -11,7 +11,7 @@
   "modules-right": ["pulseaudio", "network", "clock", "battery"],
   "niri/workspaces": {
     "all-outputs": true,
-    "disable-click": true,
+    "on-click": "activate",
     "format": "{value}: {icon}",
     "format-icons": {
       "1": "",
