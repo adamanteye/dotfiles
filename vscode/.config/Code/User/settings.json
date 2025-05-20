@@ -51,5 +51,7 @@
     "ruff.nativeServer": "on",
     "cSpell.userWords": [
         "adamanteye"
-    ]
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n"
 }

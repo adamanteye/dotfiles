@@ -1,16 +1,16 @@
 set -gx EDITOR helix
-set -gx MANPAGER less
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -gx MANROFFOPT -c
 set -gx VISUAL helix
 
 set -gx DEBEMAIL "ada@adamanteye.cc"
 set -gx DEBFULLNAME adamanteye
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    fortune ada
 end
 
 function fish_greeting
-    fortune tang300
 end
 
 if not contains "$HOME/.local/bin" $PATH

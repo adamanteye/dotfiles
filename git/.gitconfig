@@ -33,6 +33,7 @@
 [core]
 	quotepath = false
 	pager = bat --style=plain
+	autocrlf = input
 [http]
 	proxy = http://[::1]:10801
 [https]

@@ -29,10 +29,8 @@ alias rm='rm -vi'
 
 alias ssh='send-heartbeat "initiate SSH connection" && /usr/bin/ssh'
 alias poweroff='send-heartbeat "shut down laptop" && /usr/bin/poweroff'
-alias pacman='sudo pacman'
 
-alias systemctl='sudo systemctl'
-alias ip='sudo ip --color=auto'
+alias ip='ip --color=auto'
 alias journalctl='sudo journalctl'
 alias dmesg='sudo dmesg'
 

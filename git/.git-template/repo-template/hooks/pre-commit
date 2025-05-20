@@ -1,7 +1,6 @@
 #!/bin/sh
 
-if git rev-parse --verify HEAD >/dev/null 2>&1
-then
+if git rev-parse --verify HEAD >/dev/null 2>&1; then
     against=HEAD
 else
     against=$(git hash-object -t tree /dev/null)
@@ -11,4 +10,3 @@ fi
 exec 1>&2
 
 exec git diff-index --check --cached $against --
-
