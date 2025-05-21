@@ -21,9 +21,8 @@ end
 source "$HOME/.cargo/env.fish"
 
 # gpg and ssh
-set -e SSH_AGENT_PID
-set -e SSH_AUTH_SOCK
-gpg-connect-agent reloadagent /bye >/dev/null
-set -U -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-set -x GPG_TTY (tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
+if test -S (gpgconf --list-dirs agent-ssh-socket)
+    set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+    set -gx GPG_TTY (tty)
+    gpg-connect-agent updatestartuptty /bye >/dev/null
+end
