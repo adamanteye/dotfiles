@@ -9,6 +9,7 @@ set folder=$HOME/Mail
 source ~/.mutt/mailboxes
 folder-hook tsinghua 'source ~/.mutt/tsinghua.hook'
 folder-hook gmail 'source ~/.mutt/gmail.hook'
+folder-hook ada 'source ~/.mutt/ada.hook'
 
 # Default Folder
 set spoolfile=+tsinghua/INBOX

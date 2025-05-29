@@ -1,0 +1,5 @@
+set from="adamanteye <ada@adamanteye.cc>"
+set spoolfile=+ada/INBOX
+set postponed=+ada/Drafts
+set record=+ada/Sent\ Items
+set trash=+ada/Trash
