@@ -1,18 +1,18 @@
 {
   "height": 44,
-  "layer": "top",
+  "layer": "bottom",
   "position": "top",
   "spacing": 4,
   "tray": {
     "spacing": 10,
   },
   "modules-left": ["tray", "cpu", "disk", "temperature", "backlight"],
-  "modules-center": ["niri/workspaces"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": ["pulseaudio", "network", "clock", "battery"],
-  "niri/workspaces": {
+  "hyprland/workspaces": {
     "all-outputs": true,
     "on-click": "activate",
-    "format": "{value}: {icon}",
+    "format": "{name}: {icon}",
     "format-icons": {
       "1": "",
       "2": "",
