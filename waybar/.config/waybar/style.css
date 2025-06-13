@@ -1,22 +1,16 @@
 @import "./mocha.css";
 
-/* margin: top right bottom left */
-/* Spacing outside the element */
-
-/* padding: top right bottom left */
-/* Spacing inside the element */
-
 * {
   font-family: LXGW Bright Code TC;
   font-size: 14px;
+  background-color: transparent;
 }
 
 window#waybar {
-  background-color: alpha(@base, 0.6);
+  background-color: transparent;
   color: @text;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  border-radius: 0px;
+  border-radius: 8px;
+  transition-property: border-color, opacity;
   transition-duration: 0.5s;
   margin: 10px 10px;
 }
@@ -27,22 +21,21 @@ window#waybar.hidden {
 
 #workspaces button {
   color: @text;
-  background: @base;
+  background-color: transparent;
+  border: 1px solid alpha(@subtext0, 0.9);
   border-radius: 8px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px;
   margin: 7px 5px 10px 5px;
-  border: 1px solid @subtext1;
 }
 
 #workspaces button:hover {
-  background: @surface0;
+  border-color: @subtext1;
   color: @text;
 }
 
 #workspaces button.active {
-  color: @crust;
-  background: @overlay2;
-  border: none;
+  color: @text;
+  border: 2px solid @overlay1;
 }
 
 #clock,
@@ -56,67 +49,71 @@ window#waybar.hidden {
 #disk {
   padding: 0px 14px;
   margin: 7px 0px 10px 0px;
+  border: 1px solid alpha(@subtext0, 0.9);
   border-radius: 8px;
-  color: @crust;
+  color: @text;
+  background-color: transparent;
 }
 
 #window,
 #tray {
   padding: 0px 25px 0px 20px;
   margin: 7px 0px 10px 0px;
-  background-color: @mauve;
+  border: 1px solid alpha(@mauve, 0.9);
 }
 
 #cpu {
-  background-color: @lavender;
+  border-color: alpha(@lavender, 0.9);
 }
 
 #temperature {
-  background-color: @blue;
+  border-color: alpha(@blue, 0.9);
 }
 
 #backlight {
-  background-color: @sapphire;
+  border-color: alpha(@sapphire, 0.9);
 }
 
 #pulseaudio {
   padding: 0px 20px 0px 17px;
-  background-color: @teal;
+  border-color: alpha(@teal, 0.9);
 }
 
 #disk {
-  background-color: @green;
+  border-color: alpha(@green, 0.9);
 }
 
 #network {
   padding: 0px 15px 0px 20px;
-  background-color: @green;
+  border-color: alpha(@green, 0.9);
 }
 
 #battery {
-  background-color: @yellow;
+  border-color: alpha(@yellow, 0.9);
 }
 
 #clock {
-  background-color: @peach;
+  border-color: alpha(@peach, 0.9);
 }
 
 @keyframes blink {
   to {
-    background-color: rgba(30, 34, 42, 0.5);
-    color: #abb2bf;
+    border-color: alpha(@red, 0.9);
+    color: @red;
   }
 }
 
 #battery.critical:not(.charging) {
-  color: #f53c3c;
+  color: @red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  border: 2px solid alpha(@red, 0.9);
 }
 
 label:focus {
-  background-color: #000000;
+  border: 1px solid alpha(@subtext1, 0.9);
+  background-color: transparent;
 }

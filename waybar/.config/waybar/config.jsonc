@@ -7,12 +7,12 @@
     "spacing": 10,
   },
   "modules-left": ["tray", "cpu", "disk", "temperature", "backlight"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["niri/workspaces"],
   "modules-right": ["pulseaudio", "network", "clock", "battery"],
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "all-outputs": true,
     "on-click": "activate",
-    "format": "{name}: {icon}",
+    "format": "{value}: {icon}",
     "format-icons": {
       "1": "",
       "2": "",
