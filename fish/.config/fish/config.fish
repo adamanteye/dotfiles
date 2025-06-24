@@ -7,7 +7,9 @@ set -gx DEBEMAIL "ada@adamanteye.cc"
 set -gx DEBFULLNAME adamanteye
 
 if status is-interactive
-    fortune ada
+    if test "$XDG_SESSION_TYPE" = wayland
+        fortune ada
+    end
 end
 
 function fish_greeting
