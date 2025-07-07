@@ -1,4 +1,4 @@
-set from="Zhehan Yang <yangzheh22@gmail.com>"
+set from="adamanteye <yangzheh22@gmail.com>"
 set spoolfile=+gmail/INBOX
 set postponed=+gmail/[Gmail].Drafts
 # see https://github.com/LukeSmithxyz/mutt-wizard/issues/333

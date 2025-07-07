@@ -1,1 +1,6 @@
-mailboxes "+gmail/INBOX" "+gmail/[Gmail].Drafts" "+gmail/[Gmail].Sent Mail" "+gmail/[Gmail].Spam" "+gmail/[Gmail].Trash" "+tsinghua/Drafts" "+tsinghua/INBOX" "+tsinghua/Sent Items" "+tsinghua/Trash"
+mailboxes "+ada/Drafts" "+ada/INBOX" "+ada/Junk" "+ada/Sent" "+ada/Trash"
+mailboxes "+gmail/INBOX" "+gmail/[Gmail].Drafts" "+gmail/[Gmail].Sent Mail" "+gmail/[Gmail].Spam" "+gmail/[Gmail].Trash"
+mailboxes "+tsinghua/Drafts" "+tsinghua/INBOX" "+tsinghua/Sent Items" "+tsinghua/Trash"
+named-mailboxes "ada-drafts" "+ada/Drafts" "ada-inbox" "+ada/INBOX" "ada-junk" "+ada/Junk" "ada-sent" "+ada/Sent" "ada-trash" "+ada/Trash"
+named-mailboxes "tsinghua-drafts" "+tsinghua/Drafts" "tsinghua-inbox" "+tsinghua/INBOX" "tsinghua-sent" "+tsinghua/Sent Items" "tsinghua-trash" "+tsinghua/Trash"
+named-mailboxes "gmail-inbox" "+gmail/INBOX" "gmail-drafts" "+gmail/[Gmail].Drafts" "gmail-sent" "+gmail/[Gmail].Sent Mail" "gmail-junk" "+gmail/[Gmail].Spam" "gmail-trash" "+gmail/[Gmail].Trash"

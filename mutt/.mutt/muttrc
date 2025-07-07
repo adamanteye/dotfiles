@@ -7,18 +7,30 @@
 set mbox_type=Maildir
 set folder=$HOME/Mail
 source ~/.mutt/mailboxes
-folder-hook tsinghua 'source ~/.mutt/tsinghua.hook'
-folder-hook gmail 'source ~/.mutt/gmail.hook'
-folder-hook ada 'source ~/.mutt/ada.hook'
+folder-hook +tsinghua/INBOX 'source ~/.mutt/tsinghua.hook'
+folder-hook +tsinghua/Drafs 'source ~/.mutt/tsinghua.hook'
+folder-hook +tsinghua/Trash 'source ~/.mutt/tsinghua.hook'
+folder-hook +tsinghua/Sent\ Items 'source ~/.mutt/tsinghua.hook'
+folder-hook +gmail/INBOX 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/[Gmail].Drafts 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/[Gmail].Spam 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/[Gmail].Trash 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/[Gmail].Sent\ Mail 'source ~/.mutt/gmail.hook'
+folder-hook +ada/INBOX 'source ~/.mutt/ada.hook'
+folder-hook +ada/Drafts 'source ~/.mutt/ada.hook'
+folder-hook +ada/Sent 'source ~/.mutt/ada.hook'
+folder-hook +ada/Trash 'source ~/.mutt/ada.hook'
 
 # Default Folder
-set spoolfile=+tsinghua/INBOX
+source ~/.mutt/gmail.hook
+set spoolfile=+gmail/INBOX
 
 # No Ask for Confirmation
 set delete=yes
 
-# Switch
+# Sidebar
 set sidebar_visible=yes
+set sidebar_width=17
 
 # Date Format
 # https://neomutt.org/feature/cond-date
