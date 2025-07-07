@@ -14,6 +14,7 @@ alias mutt='send-heartbeat "check emails" && neomutt'
 alias news='send-heartbeat "read RSS feeds" && newsboat'
 alias telegram-desktop='send-heartbeat "open telegram" && /usr/bin/telegram-desktop'
 alias g='git'
+alias z='zellij'
 
 alias l='lsd'
 alias ls='lsd'
@@ -22,22 +23,25 @@ alias ll='lsd -lh'
 
 alias cp='uu-cp -g'
 alias less='less -r'
-alias grep='grep --color auto'
+alias grep='grep --color=auto'
 alias tree='lsd --tree'
 alias cat='bat --style=plain --paging=never'
 alias htop='send-heartbeat "view htop" && /usr/bin/htop'
-alias scp='scp -C'
+alias scp='gpg-connect-agent updatestartuptty /bye >/dev/null && /usr/bin/scp -C'
 alias rm='rm -vi'
 
-alias ssh='send-heartbeat "initiate SSH connection" && /usr/bin/ssh'
+alias rsync='gpg-connect-agent updatestartuptty /bye >/dev/null && /usr/bin/rsync'
+alias ssh='send-heartbeat "initiate SSH connection" && gpg-connect-agent updatestartuptty /bye >/dev/null && /usr/bin/ssh'
 alias poweroff='send-heartbeat "shut down laptop" && /usr/bin/poweroff'
 
 alias ip='ip --color=auto'
 
+alias chrome='google-chrome-stable'
+
 alias weather-beijing='curl wttr.in/beijing'
 alias weather-yinchuan='curl wttr.in/yinchuan'
 
-alias debian-builder='docker run -it --rm --name debian --network host -e HTTP_PROXY=http://[::1]:10801 -v "$HOME/Documents/debian:/home/debian:rw" -v "/etc/wgetrc:/etc/wgetrc:ro" -e DEBFULLNAME -e DEBEMAIL ghcr.io/adamanteye/debian-builder:master'
+alias debian-builder='docker run -it --rm --name debian --network host -e HTTP_PROXY=http://[::1]:10801 -v "$HOME/Documents/debian:/home/debian:rw" -v "/etc/wgetrc:/etc/wgetrc:ro" -e DEBFULLNAME -e DEBEMAIL ghcr.io/adamanteye/debian-builder:latest'
 
 alias setproxy='export all_proxy=http://[::1]:10801'
 alias unsetproxy='export all_proxy='
