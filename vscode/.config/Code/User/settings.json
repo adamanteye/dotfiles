@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.colorTheme": "Monokai",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "[typst]": {
