@@ -256,6 +256,7 @@ layout {
 // See the binds section below for more spawn examples.
 spawn-at-startup "foot" "--server"
 spawn-at-startup "fcitx5" "-d"
+spawn-at-startup "sh" "-c" "rm -f ~/.cache/cliphist/db"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "xwayland-satellite"

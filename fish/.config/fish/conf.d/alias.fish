@@ -16,6 +16,8 @@ alias telegram-desktop='send-heartbeat "open telegram" && /usr/bin/telegram-desk
 alias g='git'
 alias z='zellij'
 
+alias objdump='/usr/bin/objdump -M suffix'
+
 alias l='lsd'
 alias ls='lsd'
 alias la='lsd -A'
