@@ -16,10 +16,6 @@ folder-hook +gmail/[Gmail].Drafts 'source ~/.mutt/gmail.hook'
 folder-hook +gmail/[Gmail].Spam 'source ~/.mutt/gmail.hook'
 folder-hook +gmail/[Gmail].Trash 'source ~/.mutt/gmail.hook'
 folder-hook +gmail/[Gmail].Sent\ Mail 'source ~/.mutt/gmail.hook'
-folder-hook +ada/INBOX 'source ~/.mutt/ada.hook'
-folder-hook +ada/Drafts 'source ~/.mutt/ada.hook'
-folder-hook +ada/Sent 'source ~/.mutt/ada.hook'
-folder-hook +ada/Trash 'source ~/.mutt/ada.hook'
 
 # Default Folder
 source ~/.mutt/gmail.hook
@@ -43,7 +39,13 @@ set abort_noattach=ask-yes
 set abort_noattach_regex="\\<attach(|ed|ments?)\\>"
 
 # SMTP
+# https://unix.stackexchange.com/questions/385179/multiple-smtp-accounts-with-mutt-and-msmtp
 set sendmail=/usr/bin/msmtp
+set use_from=yes
+set envelope_from=yes
+
+alias gmail adamanteye <yangzheh22@gmail.com>
+alias tsinghua 杨哲涵 <yangzheh22@mails.tsinghua.edu.cn>
 
 # Notify
 set check_new
