@@ -15,6 +15,7 @@ alias news='send-heartbeat "read RSS feeds" && newsboat'
 alias telegram-desktop='send-heartbeat "open telegram" && /usr/bin/telegram-desktop'
 alias g='git'
 alias z='zellij'
+alias t='taskwarrior-tui'
 
 alias objdump='/usr/bin/objdump -M suffix'
 

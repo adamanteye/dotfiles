@@ -302,10 +302,11 @@ binds {
     Mod+B { spawn "firefox"; }
     Mod+T { spawn "footclient"; }
     Mod+E { spawn "footclient" "yazi"; }
-    Mod+N { spawn "sh" "-c" "footclient fish --command news"; }
-    Mod+M { spawn "sh" "-c" "footclient fish --command mutt"; }
-    Mod+L { spawn "sh" "-c" "Telegram"; }
-    Mod+Z { spawn "sh" "-c" "zotero"; }
+    Mod+N { spawn "footclient" "newsboat"; }
+    Mod+M { spawn "footclient" "neomutt"; }
+    Mod+L { spawn "Telegram"; }
+    Mod+K { spawn "footclient" "taskwarrior-tui"; }
+    Mod+Z { spawn "zotero"; }
     Mod+I { spawn "code"; }
     Mod+W { spawn "firefox" "https://szfilehelper.weixin.qq.com/"; }
     Mod+R { spawn "wofi"; }
