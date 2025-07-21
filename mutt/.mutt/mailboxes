@@ -1,4 +1,2 @@
-mailboxes "+gmail/INBOX" "+gmail/[Gmail].Drafts" "+gmail/[Gmail].Sent Mail" "+gmail/[Gmail].Spam" "+gmail/[Gmail].Trash"
-mailboxes "+tsinghua/Drafts" "+tsinghua/INBOX" "+tsinghua/Sent Items" "+tsinghua/Trash"
-named-mailboxes "tsinghua-draft" "+tsinghua/Drafts" "tsinghua-inbox" "+tsinghua/INBOX" "tsinghua-sent" "+tsinghua/Sent Items" "tsinghua-trash" "+tsinghua/Trash"
-named-mailboxes "gmail-inbox" "+gmail/INBOX" "gmail-draft" "+gmail/[Gmail].Drafts" "gmail-sent" "+gmail/[Gmail].Sent Mail" "gmail-junk" "+gmail/[Gmail].Spam" "gmail-trash" "+gmail/[Gmail].Trash"
+mailboxes "+tsinghua/draft" "+tsinghua/inbox" "+tsinghua/sent" "+tsinghua/trash"
+mailboxes "+gmail/inbox" "+gmail/draft" "+gmail/sent" "+gmail/junk" "+gmail/trash"

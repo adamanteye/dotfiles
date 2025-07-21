@@ -1,6 +1,6 @@
 set from="adamanteye <yangzheh22@gmail.com>"
-set spoolfile=gmail-inbox
-set postponed=gmail-draft
+set spoolfile=+gmail/inbox
+set postponed=+gmail/draft
 # see https://github.com/LukeSmithxyz/mutt-wizard/issues/333
 set record=/dev/null
-set trash=gmail-trash
+set trash=+gmail/trash

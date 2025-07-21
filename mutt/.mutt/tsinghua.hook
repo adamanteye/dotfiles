@@ -1,5 +1,5 @@
 set from="杨哲涵 <yangzheh22@mails.tsinghua.edu.cn>"
-set spoolfile=tsinghua-inbox
-set postponed=tsinghua-draft
-set record=tsinghua-sent
-set trash=tsinghua-trash
+set spoolfile=+tsinghua/inbox
+set postponed=+tsinghua/draft
+set record=+tsinghua/sent
+set trash=+tsinghua/trash

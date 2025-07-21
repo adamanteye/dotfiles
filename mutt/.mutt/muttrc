@@ -7,19 +7,19 @@
 set mbox_type=Maildir
 set folder=$HOME/Mail
 source ~/.mutt/mailboxes
-folder-hook +tsinghua/INBOX 'source ~/.mutt/tsinghua.hook'
-folder-hook +tsinghua/Drafs 'source ~/.mutt/tsinghua.hook'
-folder-hook +tsinghua/Trash 'source ~/.mutt/tsinghua.hook'
-folder-hook +tsinghua/Sent\ Items 'source ~/.mutt/tsinghua.hook'
-folder-hook +gmail/INBOX 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/[Gmail].Drafts 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/[Gmail].Spam 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/[Gmail].Trash 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/[Gmail].Sent\ Mail 'source ~/.mutt/gmail.hook'
+folder-hook +tsinghua/inbox 'source ~/.mutt/tsinghua.hook'
+folder-hook +tsinghua/draft 'source ~/.mutt/tsinghua.hook'
+folder-hook +tsinghua/trash 'source ~/.mutt/tsinghua.hook'
+folder-hook +tsinghua/sent 'source ~/.mutt/tsinghua.hook'
+folder-hook +gmail/inbox 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/draft 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/junk 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/trash 'source ~/.mutt/gmail.hook'
+folder-hook +gmail/sent 'source ~/.mutt/gmail.hook'
 
 # Default Folder
 source ~/.mutt/gmail.hook
-set spoolfile=+gmail/INBOX
+set spoolfile=+gmail/inbox
 
 # No Ask for Confirmation
 set delete=yes
