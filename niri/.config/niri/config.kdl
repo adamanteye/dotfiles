@@ -100,6 +100,13 @@ output "Chimei Innolux Corporation 0x15F6 Unknown" {
     // position x=1280 y=0
 }
 
+output "AD electronics G24L22S 0x00000005" {
+    // off
+    mode "1920x1080@60.000"
+    scale 1
+    transform "normal"
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
