@@ -75,7 +75,7 @@ auto-format = true
 name = "yaml"
 language-servers = ["yaml-language-server"]
 file-types = ["yml", "yaml"]
-formatter = { command = "prettier", args = [".yaml"] }
+formatter = { command = "yamlfmt", args = ["-"] }
 auto-format = true
 
 [[language]]
