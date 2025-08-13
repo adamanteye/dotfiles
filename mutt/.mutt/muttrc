@@ -67,10 +67,10 @@ set forward_quote=yes   # forward message would be quoted
 set pager_stop
 
 # Bind
-
 bind pager h display-toggle-weed
-bind pager j previous-line
 bind pager k next-line
+bind pager <up> previous-line
+bind pager <down> next-line
 bind index h previous-entry
 bind index l next-entry
 bind index \Cu half-up

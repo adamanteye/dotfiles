@@ -1,7 +1,7 @@
 [user]
 	name = adamanteye
 	email = ada@adamanteye.cc
-	signingKey = FC012E34C8FFF4AB
+	signingKey = 56FBDE2A0AABA01A
 [commit]
 	gpgsign = true
 	template = ~/.git-template/commit-msg
@@ -19,7 +19,7 @@
 	pl = pull
 	df = diff
 	cl = clone
-	undo = reset --soft HEAD~1
+	fp = format-patch
 [rebase]
 	autoSquash = true
 	updateRefs = true

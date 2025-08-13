@@ -53,5 +53,6 @@
         "adamanteye"
     ],
     "files.trimTrailingWhitespace": true,
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "diffEditor.ignoreTrimWhitespace": false,
 }

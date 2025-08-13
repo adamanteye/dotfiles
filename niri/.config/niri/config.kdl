@@ -82,7 +82,7 @@ output "Chimei Innolux Corporation 0x15F6 Unknown" {
     mode "1920x1080@40.005"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.2
+    scale 1.0
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
