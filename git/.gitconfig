@@ -14,12 +14,14 @@
 	st = stash
 	kmt = commit
 	chk = checkout
-	br = branch
+	gr = log --oneline --decorate --all --graph --color
+	br = branch -vv
 	ps = push
 	pl = pull
 	df = diff
 	cl = clone
 	fp = format-patch
+	cp = cherry-pick
 [rebase]
 	autoSquash = true
 	updateRefs = true
@@ -32,7 +34,7 @@
 	templateDir = ~/.git-template/repo-template/
 [core]
 	quotepath = false
-	pager = bat --style=plain
+	pager = batcat --style=plain
 	eol = lf
 [http]
 	proxy = http://[::1]:10801

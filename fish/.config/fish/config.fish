@@ -1,20 +1,22 @@
-set -gx EDITOR helix
-set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -gx MANROFFOPT -c
-set -gx VISUAL helix
+set -x EDITOR hx
+set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"
+set -x MANROFFOPT -c
+set -x VISUAL hx
 
-set -gx DEBEMAIL "ada@adamanteye.cc"
-set -gx DEBFULLNAME adamanteye
+set -x DEBEMAIL "ada@adamanteye.cc"
+set -x DEBFULLNAME adamanteye
 
+# fortune
 if status is-interactive
     if test "$XDG_SESSION_TYPE" = wayland
-        fortune ada
+        # fortune ada
     end
 end
 
 function fish_greeting
 end
 
+# local bin
 if not contains "$HOME/.local/bin" $PATH
     set -x PATH "$HOME/.local/bin" $PATH
 end
@@ -22,9 +24,11 @@ end
 # rustup
 source "$HOME/.cargo/env.fish"
 
+# go
+set -x GOPATH "$HOME/.go"
+set -x PATH "$HOME/.go/bin" $PATH
+
 # gpg and ssh
 if test -S (gpgconf --list-dirs agent-ssh-socket)
     set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-    set -gx GPG_TTY (tty)
-    gpg-connect-agent updatestartuptty /bye >/dev/null
 end

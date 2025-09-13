@@ -38,8 +38,7 @@
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
-        "markdown": true,
-        "scminput": false
+        "markdown": true
     },
     "explorer.confirmDragAndDrop": false,
     "files.associations": {
@@ -55,4 +54,5 @@
     "files.trimTrailingWhitespace": true,
     "files.eol": "\n",
     "diffEditor.ignoreTrimWhitespace": false,
+    "python.defaultInterpreterPath": "/bin/python",
 }

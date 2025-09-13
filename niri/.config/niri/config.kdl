@@ -82,7 +82,7 @@ output "Chimei Innolux Corporation 0x15F6 Unknown" {
     mode "1920x1080@40.005"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.0
+    scale 1.2
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -112,7 +112,7 @@ output "AD electronics G24L22S 0x00000005" {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 4
+    gaps 0
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -191,7 +191,7 @@ layout {
     // You can also add a border. It's similar to the focus ring, but always visible.
     border {
         // off
-        width 2
+        width 1
         // width 128
 
         // active-color "#f38ba8"
@@ -235,7 +235,7 @@ layout {
         softness 30
 
         // Spread expands the shadow.
-        spread 5
+        spread 1
 
         // Offset moves the shadow relative to the window.
         offset x=0 y=5
