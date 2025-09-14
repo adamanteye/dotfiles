@@ -1,15 +1,16 @@
 abbr -a c clear
 abbr -a k kubectl
-
 abbr -a vim hx
 abbr -a wk wl-copy
 abbr -a kmt 'git kmt'
-abbr -a n niri-session
-abbr mutt neomutt
-abbr news newsboat
+abbr -a n networkctl
+abbr -a a 'sudo -H aptitude'
+abbr -a s systemctl
+abbr -a sw sway
+abbr -a news newsboat
 abbr -a g git
 abbr -a t tmux
-alias t='taskwarrior-tui'
+abbr -a m man
 
 alias objdump='/usr/bin/objdump -M suffix'
 

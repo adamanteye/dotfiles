@@ -21,13 +21,6 @@ if not contains "$HOME/.local/bin" $PATH
     set -x PATH "$HOME/.local/bin" $PATH
 end
 
-# rustup
-source "$HOME/.cargo/env.fish"
-
-# go
-set -x GOPATH "$HOME/.go"
-set -x PATH "$HOME/.go/bin" $PATH
-
 # gpg and ssh
 if test -S (gpgconf --list-dirs agent-ssh-socket)
     set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)

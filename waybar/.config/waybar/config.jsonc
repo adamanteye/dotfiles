@@ -7,9 +7,9 @@
     "spacing": 10,
   },
   "modules-left": ["tray", "cpu", "disk", "temperature", "backlight"],
-  "modules-center": ["niri/workspaces"],
+  "modules-center": ["sway/workspaces"],
   "modules-right": ["pulseaudio", "network", "clock", "battery"],
-  "niri/workspaces": {
+  "sway/workspaces": {
     "all-outputs": true,
     "on-click": "activate",
     "format": "{value}: {icon}",
@@ -64,8 +64,7 @@
       "portable": "",
       "car": "",
       "default": ["", "", ""],
-    },
-    "on-click": "pavucontrol",
+    }
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
