@@ -30,13 +30,10 @@ set sidebar_width=17
 
 # Date Format
 # https://neomutt.org/feature/cond-date
-set index_format='%4C %Z %<[y?%<[m?%<[d?%[%H:%M]&%[%m-%d]>&%[%m-%d]>&%[%y/%m]> %-15.15L (%<l?%4l&%4c>) %s'
 
 # Attachment
 # https://neomutt.org/feature/forgotten-attachment
 set abort_noattach=ask-yes
-# English: attach, attached, attachment, attachments
-set abort_noattach_regex="\\<attach(|ed|ments?)\\>"
 
 # SMTP
 # https://unix.stackexchange.com/questions/385179/multiple-smtp-accounts-with-mutt-and-msmtp

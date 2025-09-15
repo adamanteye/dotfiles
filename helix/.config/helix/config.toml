@@ -1,6 +1,7 @@
 theme = "monokai_pro_machine"
 
 [editor]
+shell = ["fish", "c"]
 line-number = "relative"
 cursorline = true
 color-modes = true

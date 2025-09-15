@@ -15,14 +15,14 @@
     "format": "{value}: {icon}",
     "format-icons": {
       "1": "",
-      "2": "",
-      "3": "",
+      "2": "",
+      "3": "",
       "4": "",
       "5": "",
-      "6": "",
-      "7": "",
-      "9": "",
-      "10": "",
+      "6": "",
+      "7": "",
+      "9": "",
+      "10": "",
       "urgent": "",
       "active": "",
       "default": "",
@@ -34,13 +34,13 @@
   },
   "cpu": {
     "interval": 10,
-    "format": "  {usage}%",
+    "format": " {usage}%",
     "max-length": 10,
   },
   "temperature": {
     "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
     "input-filename": "temp1_input",
-    "format": " {temperatureC}°C",
+    "format": " {temperatureC}",
     "on-click": "psensor",
   },
   "backlight": {
@@ -51,11 +51,11 @@
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
     "format": "{icon} {volume}% {format_source}",
-    "format-bluetooth": "{icon}  {volume}% {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format-bluetooth": " {icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
     "format-source": " {volume}%",
-    "format-source-muted": " ",
+    "format-source-muted": "",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -69,9 +69,9 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },

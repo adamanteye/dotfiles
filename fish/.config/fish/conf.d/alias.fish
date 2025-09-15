@@ -5,7 +5,12 @@ abbr -a wk wl-copy
 abbr -a kmt 'git kmt'
 abbr -a n networkctl
 abbr -a a 'sudo -H aptitude'
-abbr -a s systemctl
+abbr -a snapshot 'sudo btrfs su sn -r / /bk-$(date +%Y-%m-%d).d'
+abbr -a s sudo
+abbr -a tcp 'ss -t'
+abbr -a udp 'ss -u'
+abbr -a sys systemctl
+abbr -a nt 'nc -vz -w2'
 abbr -a sw sway
 abbr -a news newsboat
 abbr -a g git

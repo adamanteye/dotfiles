@@ -25,3 +25,5 @@ end
 if test -S (gpgconf --list-dirs agent-ssh-socket)
     set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 end
+
+source "$HOME/.cargo/env.fish"

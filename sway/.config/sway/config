@@ -6,10 +6,9 @@ bindsym $mod+P exec sway exit
 bindsym $mod+L exec telegram-desktop
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
-bindsym $mod+E exec $file
 bindsym $mod+Z exec zotero
-bindsym $mod+I exec code
-bindsym $mod+M exec $term neomutt
+bindsym $mod+I exec code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=2
+bindsym $mod+M exec $term mutt
 bindsym $mod+R exec $menu
 bindsym $mod+V exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bindsym $mod+W exec $browser 'https://szfilehelper.weixin.qq.com/'
@@ -24,14 +23,13 @@ bindsym $mod+Down resize grow height 10px
 bindsym $mod+Up resize shrink height 10px
 bindsym $mod+Left resize grow width 10px
 
-bindsym $mod+Shift+S exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshot/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
+bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 
 set $term footclient
 set $menu wofi --conf $HOME/.config/wofi/config --style $HOME/.config/wofi/style.css
 set $browser firefox
-set $file "$term yazi"
 
-output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.0 mode 1920x1080@40.005Hz position 0,0
+output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.1 mode 1920x1080@40.005Hz position 0,0
 
 exec swaybg -i $HOME/.config/sway/catppuccin-custom-darker-corners.png
 exec foot --server
@@ -61,6 +59,7 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
+
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
@@ -73,7 +72,7 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-font "LXGW Bright Code TC" Regular 12
+font "LXGW Bright Code TC" Regular 13
 
 input "type:pointer" {
     pointer_accel 0.7
@@ -91,7 +90,7 @@ input "type:keyboard" {
     repeat_rate 80
 }
 
-client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb #5e81ac
-client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a #434c5e
-client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a #434c5e
-client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb #ebcb8b
+client.focused          #878787 #4c566a #aeb3bb #878787 #878787
+client.focused_inactive #878787 #2d333f #aeb3bb #878787 #878787
+client.unfocused        #878787 #2d333f #aeb3bb #878787 #878787
+client.urgent           #878787 #2d333f #aeb3bb #878787 #878787
