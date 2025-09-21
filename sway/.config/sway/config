@@ -29,7 +29,7 @@ set $term footclient
 set $menu wofi --conf $HOME/.config/wofi/config --style $HOME/.config/wofi/style.css
 set $browser firefox
 
-output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.1 mode 1920x1080@40.005Hz position 0,0
+output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.2 mode 1920x1080@40.005Hz position 0,0
 
 exec swaybg -i $HOME/.config/sway/catppuccin-custom-darker-corners.png
 exec foot --server

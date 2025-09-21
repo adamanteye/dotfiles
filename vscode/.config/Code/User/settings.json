@@ -55,4 +55,5 @@
     "files.eol": "\n",
     "diffEditor.ignoreTrimWhitespace": false,
     "python.defaultInterpreterPath": "/bin/python",
+    "git.openRepositoryInParentFolders": "always",
 }
