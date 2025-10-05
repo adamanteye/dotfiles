@@ -14,6 +14,8 @@ abbr -a nt 'nc -vz -w2'
 abbr -a sw sway
 abbr -a news newsboat
 abbr -a g git
+abbr -a j journalctl
+abbr -a h hledger
 abbr -a t tmux
 abbr -a m man
 
