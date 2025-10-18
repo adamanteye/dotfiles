@@ -8,7 +8,7 @@ bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
 bindsym $mod+Z exec zotero
 bindsym $mod+I exec code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=2
-bindsym $mod+M exec $term mutt
+bindsym $mod+M exec $term neomutt
 bindsym $mod+R exec $menu
 bindsym $mod+V exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
 bindsym $mod+W exec "$HOME/.local/bin/wechat"
@@ -31,7 +31,7 @@ set $browser firefox
 
 output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1 res 1920x1080 position 0 0
 
-exec swaybg -i $HOME/.config/sway/catppuccin-custom-darker-corners.png
+exec swaybg -i $HOME/.local/share/wallpaper/bg.png
 exec foot --server
 exec waybar
 exec mako
@@ -73,7 +73,7 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-font "LXGW Bright Code TC" Regular 13
+font "LXGW Bright Code TC" Regular 14
 
 input "type:pointer" {
     pointer_accel 0.7

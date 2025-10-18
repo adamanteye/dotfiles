@@ -28,7 +28,6 @@ alias ll='ls -lh --color=auto'
 
 alias less='less -r'
 alias grep='grep --color=auto'
-alias cat='batcat --style=plain --paging=never'
 alias rm='rm -vi'
 
 alias ip='ip --color=auto'
@@ -37,8 +36,6 @@ alias chrome='google-chrome-stable'
 
 alias weather-beijing='curl wttr.in/beijing'
 alias weather-yinchuan='curl wttr.in/yinchuan'
-
-abbr -a debian-builder 'docker run -it --rm --name debian --network host -e HTTP_PROXY=http://[::1]:10801 -v "$HOME/Documents/debian:/home/debian:rw" -v "/etc/wgetrc:/etc/wgetrc:ro" -e DEBFULLNAME -e DEBEMAIL ghcr.io/adamanteye/debian-builder:latest'
 
 abbr -a setproxy 'export ALL_PROXY=http://[::1]:10801 && export HTTPS_PROXY=http://[::1]:10801'
 abbr -a unsetproxy 'export ALL_PROXY= && export HTTPS_PROXY='

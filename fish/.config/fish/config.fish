@@ -1,5 +1,4 @@
 set -x EDITOR hx
-set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"
 set -x MANROFFOPT -c
 set -x VISUAL hx
 

@@ -15,7 +15,7 @@
 	kmt = commit
 	chk = checkout
 	gr = log --oneline --decorate --all --graph --color
-	br = branch -vv
+	br = branch -vv --all
 	ps = push
 	pl = pull
 	df = diff
@@ -34,7 +34,6 @@
 	templateDir = ~/.git-template/repo-template/
 [core]
 	quotepath = false
-	pager = batcat --style=plain
 	eol = lf
 [http]
 	proxy = http://[::1]:10801

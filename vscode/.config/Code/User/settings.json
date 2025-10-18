@@ -9,18 +9,10 @@
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
   "tinymist.formatterMode": "typstyle",
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "evenBetterToml.formatter.trailingNewline": true,
-  "evenBetterToml.formatter.reorderInlineTables": true,
-  "evenBetterToml.formatter.reorderArrays": true,
-  "evenBetterToml.formatter.reorderKeys": true,
-  "evenBetterToml.taplo.bundled": false,
-  "evenBetterToml.taplo.path": "/usr/bin/taplo",
   "rust-analyzer.check.command": "clippy",
   "markdown.extension.tableFormatter.normalizeIndentation": true,
   "explorer.confirmDelete": false,
   "clangd.path": "/usr/bin/clangd",
-  "editor.wordWrap": "wordWrapColumn",
   "evenBetterToml.formatter.alignComments": true,
   "security.workspace.trust.untrustedFiles": "open",
   "ruff.format.preview": true,
@@ -70,5 +62,9 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[csv]": {
+    "editor.inlayHints.maximumLength": 0
+  }
 }
