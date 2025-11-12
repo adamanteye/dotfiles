@@ -4,3 +4,4 @@ set postponed=+gmail/draft
 # see https://github.com/LukeSmithxyz/mutt-wizard/issues/333
 set record=/dev/null
 set trash=+gmail/trash
+set signature=~/.mutt/gmail.signature

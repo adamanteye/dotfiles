@@ -1,0 +1,16 @@
+bind pager h display-toggle-weed
+bind pager k next-line
+bind pager <up> previous-line
+bind pager <down> next-line
+bind index h previous-entry
+bind index l next-entry
+bind index \Cu half-up
+bind pager \Cu half-up
+bind index \Cd half-down
+bind pager \Cd half-down
+
+bind index,pager g noop
+bind index ge last-entry
+bind index gg first-entry
+bind pager gg top
+bind pager ge bottom

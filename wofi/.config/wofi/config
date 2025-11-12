@@ -7,5 +7,4 @@ term=foot
 hide_scroll=true
 print_command=true
 insensitive=true
-prompt=
 columns=2

@@ -1,0 +1,8 @@
+color status    black white
+color signature green default
+color indicator black white
+
+color index white default
+color index_author cyan default
+color index_number blue default
+color index_subject red default

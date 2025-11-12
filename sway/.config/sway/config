@@ -1,20 +1,27 @@
 include /etc/sway/config.d/*
 
 set $mod Super
+set $term footclient
+set $menu wofi
+set $browser firefox
+
 bindsym $mod+D kill
 bindsym $mod+P exec sway exit
-bindsym $mod+L exec telegram-desktop
+bindsym $mod+L exec Telegram
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
 bindsym $mod+Z exec zotero
 bindsym $mod+I exec code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=2
 bindsym $mod+M exec $term neomutt
 bindsym $mod+R exec $menu
-bindsym $mod+V exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
-bindsym $mod+W exec "$HOME/.local/bin/wechat"
+bindsym $mod+V exec cliphist list | $menu --dmenu | cliphist decode | wl-copy
+bindsym $mod+W exec $browser https://szfilehelper.weixin.qq.com/
+bindsym $mod+J exec binaryninja
+bindsym $mod+S exec bytedance-feishu-stable
 bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
 bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
 bindsym $mod+N exec $term newsboat
+bindsym $mod+O exec swaylock --ignore-empty-password -i $HOME/.local/share/wallpaper/bg.png
 
 bindsym $mod+Shift+C reload
 
@@ -25,11 +32,9 @@ bindsym $mod+Left resize grow width 10px
 
 bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 
-set $term footclient
-set $menu wofi --conf $HOME/.config/wofi/config --style $HOME/.config/wofi/style.css
-set $browser firefox
-
-output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1 res 1920x1080 position 0 0
+output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
+output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1 pos 1920 0 res 1920x1080@60Hz
+output "TXD HDMI Unknown" scale 1.125
 
 exec swaybg -i $HOME/.local/share/wallpaper/bg.png
 exec foot --server
@@ -73,7 +78,7 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-font "LXGW Bright Code TC" Regular 14
+font "LXGW WenKai Mono" Regular 14
 
 input "type:pointer" {
     pointer_accel 0.7

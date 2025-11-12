@@ -24,7 +24,7 @@
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
   "explorer.confirmPasteNative": false,
-  "editor.fontFamily": "'LXGW Bright Code TC','Liberation Mono'",
+  "editor.fontFamily": "'LXGW Wenkai Mono','Liberation Mono'",
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
@@ -32,7 +32,7 @@
   },
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "css"
   },
   "editor.fontSize": 15,
   "files.insertFinalNewline": true,

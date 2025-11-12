@@ -1,7 +1,7 @@
 [user]
-	name = adamanteye
-	email = ada@adamanteye.cc
-	signingKey = 56FBDE2A0AABA01A
+	name = Xuelin Yang
+	email = adamanteye@disroot.org
+	signingKey = 0FE55C447E7DC406
 [commit]
 	gpgsign = true
 	template = ~/.git-template/commit-msg
@@ -14,7 +14,6 @@
 	st = stash
 	kmt = commit
 	chk = checkout
-	gr = log --oneline --decorate --all --graph --color
 	br = branch -vv --all
 	ps = push
 	pl = pull
@@ -35,10 +34,6 @@
 [core]
 	quotepath = false
 	eol = lf
-[http]
-	proxy = http://[::1]:10801
-[https]
-	proxy = http://[::1]:10801
 [color]
 	ui = true
 	pager = false

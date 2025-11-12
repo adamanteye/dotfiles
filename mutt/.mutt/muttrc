@@ -1,114 +1,66 @@
-# Minimal Configuration of Mutt under the condition
-# of https://github.com/ZenithalHourlyRate/muttrc
-
-# Edited by adamanteye
+source ~/.mutt/color.rc
+source ~/.mutt/bind.rc
+source ~/.mutt/gpg.rc
+source ~/.contact
 
 # Folders
-set mbox_type=Maildir
-set folder=$HOME/Mail
+set mbox_type = Maildir
+set folder = $HOME/Mail
 source ~/.mutt/mailboxes
-folder-hook +tsinghua/inbox 'source ~/.mutt/tsinghua.hook'
-folder-hook +tsinghua/draft 'source ~/.mutt/tsinghua.hook'
-folder-hook +tsinghua/trash 'source ~/.mutt/tsinghua.hook'
-folder-hook +tsinghua/sent 'source ~/.mutt/tsinghua.hook'
-folder-hook +gmail/inbox 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/draft 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/junk 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/trash 'source ~/.mutt/gmail.hook'
-folder-hook +gmail/sent 'source ~/.mutt/gmail.hook'
+folder-hook +tsinghua 'source ~/.mutt/tsinghua.hook'
+folder-hook +gmail 'source ~/.mutt/gmail.hook'
+folder-hook +disroot 'source ~/.mutt/disroot.hook'
 
 # Default Folder
-source ~/.mutt/gmail.hook
-set spoolfile=+gmail/inbox
-
-# No Ask for Confirmation
-set delete=yes
+source ~/.mutt/disroot.hook
 
 # Sidebar
 set sidebar_visible=yes
-set sidebar_width=17
+set sidebar_delim_chars = '/.'
+set sidebar_divider_char = '|'
+set sidebar_folder_indent = no
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+set sidebar_indent_string = '  '
+set sidebar_new_mail_only = no
+set sidebar_next_new_wrap = no
+set sidebar_short_path = no
+set sidebar_sort_method = 'unsorted'
+set sidebar_visible = yes
+set sidebar_width = 20
 
-# Date Format
-# https://neomutt.org/feature/cond-date
+# General
+set include = yes
+set quit = ask-yes
+set status_on_top
+set send_charset = "utf-8"
+set delete = yes
+
+set crypt_autosign = yes
+set crypt_reply_encrypt = yes
+set crypt_reply_sign_encrypted = yes
 
 # Attachment
 # https://neomutt.org/feature/forgotten-attachment
-set abort_noattach=ask-yes
+set abort_noattach = ask-yes
 
 # SMTP
 # https://unix.stackexchange.com/questions/385179/multiple-smtp-accounts-with-mutt-and-msmtp
-set sendmail=/usr/bin/msmtp
-set use_from=yes
-set envelope_from=yes
-
-alias gmail adamanteye <yangzheh22@gmail.com>
-alias tsinghua 杨哲涵 <yangzheh22@mails.tsinghua.edu.cn>
+set sendmail = /usr/bin/msmtp
+set use_from = yes
+set envelope_from = yes
 
 # Notify
 set check_new
 set mail_check_stats
-set new_mail_command='notify-send -t 5000 Mutt "new mails in %b mailboxes" && paplay /usr/share/sounds/freedesktop/stereo/bell.oga'
+set new_mail_command = 'notify-send -t 5000 Mutt "new mails in %b mailboxes" && pw-play /usr/share/sounds/freedesktop/stereo/message.oga'
 
-# Sorting
-set sort=threads
-set sort_browser=date
-set sort_aux=reverse-last-date-received
+# Messages
+set sort = threads
+set sort_aux = reverse-last-date-received
 
-# For compose
-set autoedit            # skip editing headers when compose mail
-set reverse_name        # reply with received email
-set include=yes         # include the original mail in reply
-set forward_quote=yes   # forward message would be quoted
+# Mailboxes
+set browser_sort = alpha
+set browser_sort_dirs_first = yes
 
 # For pager
 set pager_stop
-
-# Bind
-bind pager h display-toggle-weed
-bind pager k next-line
-bind pager <up> previous-line
-bind pager <down> next-line
-bind index h previous-entry
-bind index l next-entry
-bind index \Cu half-up
-bind pager \Cu half-up
-bind index \Cd half-down
-bind pager \Cd half-down
-
-bind index,pager g noop
-bind index ge last-entry
-bind index gg first-entry
-bind pager gg top
-bind pager ge bottom
-
-# Color
-color normal      default default         # Text is "Text"
-color index       color2 default ~N       # New Messages are Green
-color index       color1 default ~F       # Flagged messages are Red
-color index       color13 default ~T      # Tagged Messages are Red
-color index       color1 default ~D       # Messages to delete are Red
-color attachment  color5 default          # Attachments are Pink
-color signature   color8 default          # Signatures are Surface 2
-color search      color4 default          # Highlighted results are Blue
-color indicator   default color8          # currently highlighted message Surface 2=Background Text=Foreground
-color error       color1 default          # error messages are Red
-color status      color15 default         # status line "Subtext 0"
-color tree        color15 default         # thread tree arrows Subtext 0
-color tilde       color15 default         # blank line padding Subtext 0
-color hdrdefault  color13 default         # default headers Pink
-color header      color13 default "^From:"
-color header      color13 default "^Subject:"
-color quoted      color15 default         # Subtext 0
-color quoted1     color7 default          # Subtext 1
-color quoted2     color8 default          # Surface 2
-color quoted3     color0 default          # Surface 1
-color quoted4     color0 default
-color quoted5     color0 default
-
-color body        color2 default  [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+               # email addresses Green
-color body        color2 default  (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+               # URLs Green
-color body        color4 default  (^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$) # *bold* text Blue
-color body        color4 default  (^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)     # _underlined_ text Blue
-color body        color4 default  (^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)     # /italic/ text Blue
-color sidebar_flagged   color1 default    # Mailboxes with flagged mails are Red
-color sidebar_new       color10 default   # Mailboxes with new mail are Green

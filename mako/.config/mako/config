@@ -1,11 +1,4 @@
-font=LXGW Bright Code TC 12
+font=LXGW WenKai Mono
 height=200
 width=400
-background-color=#1e1e2e
-text-color=#cdd6f4
-border-color=#f5c2e7
-progress-color=over #313244
 default-timeout=5000
-
-[urgency=high]
-border-color=#fab387

@@ -1,2 +1,1 @@
-proxy=http://[::1]:10801
-https-proxy=http://[::1]:10801
+

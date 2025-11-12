@@ -1,4 +1,4 @@
-theme = "base16_default"
+theme = "base16_terminal"
 
 [editor]
 shell = ["fish", "c"]
@@ -11,6 +11,7 @@ middle-click-paste = false
 bufferline = "always"
 text-width = 80
 completion-replace = true
+auto-pairs = false
 
 [editor.statusline]
 left = ["mode", "read-only-indicator", "spinner", "version-control"]
@@ -24,6 +25,9 @@ right = [
   "file-type",
 ]
 separator = "│"
+
+[editor.smart-tab]
+enable = false
 
 [editor.soft-wrap]
 enable = true

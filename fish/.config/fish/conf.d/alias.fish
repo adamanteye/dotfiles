@@ -4,20 +4,19 @@ abbr -a vim hx
 abbr -a wk wl-copy
 abbr -a kmt 'git kmt'
 abbr -a n networkctl
-abbr -a a 'sudo -H aptitude'
 abbr -a snapshot 'sudo btrfs su sn -r / /bk-$(date +%Y-%m-%d).d'
 abbr -a s sudo
 abbr -a tcp 'ss -t'
 abbr -a udp 'ss -u'
 abbr -a sys systemctl
 abbr -a nt 'nc -vz -w2'
-abbr -a sw sway
 abbr -a news newsboat
 abbr -a g git
 abbr -a j journalctl
-abbr -a h hledger
+abbr -a h hx
 abbr -a t tmux
 abbr -a m man
+abbr -a sw sway
 
 alias objdump='/usr/bin/objdump -M suffix'
 
