@@ -1,24 +1,6 @@
 feat():
-# BREAKING CHANGE: 
+# BREAKING CHANGE:
 #
-#
-# Co-authored-by: adamanteye <ada@adamanteye.cc>
-# Co-authored-by: ANOTHER-NAME <ANOTHER-NAME@EXAMPLE.COM>"
-#
-# fix: a commit of the type fix patches a bug in your codebase
-# (this correlates with PATCH in Semantic Versioning).
-#
-# feat: a commit of the type feat introduces a new feature to
-# the codebase (this correlates with MINOR in Semantic Versioning).
 #
 # types other than [fix] and [feat] are allowed
 #  [build] [chore] [ci] [docs] [style] [refactor] [perf] [test].
-#
-# [BREAKING CHANGE] is a commit that has a footer 'BREAKING CHANGE:'
-# or appends a ! after the type/scope, introduces a breaking API change
-# (correlating with MAJOR in Semantic Versioning).
-# A BREAKING CHANGE can be part of commits of any type. For example:
-#
-# chore(backend)!: drop support for Node 6
-#
-# BREAKING CHANGE: use JavaScript features not available in Node 6.

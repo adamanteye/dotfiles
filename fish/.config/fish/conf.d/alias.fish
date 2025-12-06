@@ -14,6 +14,7 @@ abbr -a news newsboat
 abbr -a g git
 abbr -a j journalctl
 abbr -a h hx
+abbr -a hl hledger
 abbr -a t tmux
 abbr -a m man
 abbr -a sw sway

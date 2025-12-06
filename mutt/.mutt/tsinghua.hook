@@ -1,6 +1,5 @@
 set from="Zhehan Yang <yangzheh22@mails.tsinghua.edu.cn>"
 set spoolfile=+tsinghua/inbox
 set postponed=+tsinghua/draft
-set record=+tsinghua/sent
+set record=+tsinghua/inbox
 set trash=+tsinghua/trash
-set signature=~/.mutt/tsignhua.signature

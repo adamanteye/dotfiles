@@ -1,7 +1,6 @@
 set from="Xuelin Yang <adamanteye@disroot.org>"
 set spoolfile=+disroot/inbox
 set postponed=+disroot/draft
-set record=+disroot/sent
+set record=+disroot/inbox
 set trash=+disroot/trash
-set signature=~/.mutt/disroot.signature
 set pgp_default_key="AB090E4B4132048E660F0728A9668ABC782EF036"

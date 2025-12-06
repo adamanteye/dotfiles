@@ -7,7 +7,6 @@ set $browser firefox
 
 bindsym $mod+D kill
 bindsym $mod+P exec sway exit
-bindsym $mod+L exec Telegram
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
 bindsym $mod+Z exec zotero
@@ -20,6 +19,8 @@ bindsym $mod+J exec binaryninja
 bindsym $mod+S exec bytedance-feishu-stable
 bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
 bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
+bindsym $mod+H output "Chimei Innolux Corporation 0x15F6 Unknown" enable
+bindsym $mod+G output "Chimei Innolux Corporation 0x15F6 Unknown" disable
 bindsym $mod+N exec $term newsboat
 bindsym $mod+O exec swaylock --ignore-empty-password -i $HOME/.local/share/wallpaper/bg.png
 
@@ -33,7 +34,7 @@ bindsym $mod+Left resize grow width 10px
 bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 
 output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
-output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1 pos 1920 0 res 1920x1080@60Hz
+output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.125 pos 1920 0 res 1920x1080@60Hz
 output "TXD HDMI Unknown" scale 1.125
 
 exec swaybg -i $HOME/.local/share/wallpaper/bg.png

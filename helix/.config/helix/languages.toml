@@ -6,6 +6,9 @@ auto-format = true
 name = "docker-compose"
 auto-format = true
 
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
 [[language]]
 name = "typst"
 formatter = { command = "typstyle", args = [
@@ -19,7 +22,7 @@ auto-format = true
 
 [[language]]
 name = "ledger"
-formatter = { command = "hledger-fmt", args = [
+formatter = { command = "hledger", args = [
   "--no-diff",
   "--exit-zero-on-changes",
   "-",
@@ -68,6 +71,7 @@ auto-format = true
 name = "c"
 file-types = ["c", "h"]
 formatter = { command = 'clang-format' }
+indent = { tab-width = 4, unit = ' ' }
 auto-format = true
 
 [[language]]

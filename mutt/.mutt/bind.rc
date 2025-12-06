@@ -1,4 +1,5 @@
 bind pager h display-toggle-weed
+bind pager j previous-line
 bind pager k next-line
 bind pager <up> previous-line
 bind pager <down> next-line

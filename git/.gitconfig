@@ -45,3 +45,5 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[format]
+	signOff = true

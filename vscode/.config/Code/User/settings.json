@@ -17,7 +17,9 @@
   "security.workspace.trust.untrustedFiles": "open",
   "ruff.format.preview": true,
   "ruff.lint.preview": true,
-  "ruff.path": ["/usr/bin/ruff"],
+  "ruff.path": [
+    "/usr/bin/ruff"
+  ],
   "extensions.ignoreRecommendations": true,
   "hexeditor.columnWidth": 16,
   "hexeditor.showDecodedText": true,
@@ -38,7 +40,9 @@
   "files.insertFinalNewline": true,
   "notebook.insertFinalNewline": true,
   "ruff.nativeServer": "on",
-  "cSpell.userWords": ["adamanteye"],
+  "cSpell.userWords": [
+    "adamanteye"
+  ],
   "files.trimTrailingWhitespace": true,
   "files.eol": "\n",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -60,11 +64,17 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "github.copilot.nextEditSuggestions.enabled": true,
   "[csv]": {
     "editor.inlayHints.maximumLength": 0
-  }
+  },
+  "markdown-preview-github-styles.darkTheme": "dark_dimmed",
+  "files.readonlyInclude": {
+    "**/.cargo/registry/src/**/*.rs": true,
+    "**/.cargo/git/checkouts/**/*.rs": true,
+    "**/lib/rustlib/src/rust/library/**/*.rs": true,
+  },
 }

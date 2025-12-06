@@ -9,7 +9,7 @@ set -x DEBFULLNAME "Xuelin Yang"
 # fortune
 if status is-interactive
     if test "$XDG_SESSION_TYPE" = wayland
-        fortune ada
+        # fortune ada
     end
 end
 

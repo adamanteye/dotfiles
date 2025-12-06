@@ -4,5 +4,8 @@ reload-threads 100
 browser "firefox %u"
 datetime-format "%Y-%m-%d"
 
+# delete dangling urls
+cleanup-on-quit yes
+
 # killfiles
 ignore-article "https://rustcc.cn/rss" "title !~ \"【Rust日报】\""

@@ -2,6 +2,6 @@ set from="adamanteye <yangzheh22@gmail.com>"
 set spoolfile=+gmail/inbox
 set postponed=+gmail/draft
 # see https://github.com/LukeSmithxyz/mutt-wizard/issues/333
-set record=/dev/null
+# set record=/dev/null
+set record=+gmail/inbox
 set trash=+gmail/trash
-set signature=~/.mutt/gmail.signature

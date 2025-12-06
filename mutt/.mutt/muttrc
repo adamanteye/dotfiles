@@ -24,7 +24,7 @@ set sidebar_indent_string = '  '
 set sidebar_new_mail_only = no
 set sidebar_next_new_wrap = no
 set sidebar_short_path = no
-set sidebar_sort_method = 'unsorted'
+set sidebar_sort = path
 set sidebar_visible = yes
 set sidebar_width = 20
 
