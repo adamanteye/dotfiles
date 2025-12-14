@@ -1,7 +1,7 @@
 [user]
 	name = Xuelin Yang
-	email = adamanteye@disroot.org
-	signingKey = 0FE55C447E7DC406
+	email = xuelin@adamanteye.cc
+	signingKey = 744233565E837DD4B918D9EF53D64EB719901BD8
 [commit]
 	gpgsign = true
 	template = ~/.git-template/commit-msg
@@ -14,6 +14,7 @@
 	st = stash
 	kmt = commit
 	chk = checkout
+	gr = log --oneline --decorate --all --graph --color
 	br = branch -vv --all
 	ps = push
 	pl = pull
@@ -21,6 +22,7 @@
 	cl = clone
 	fp = format-patch
 	cp = cherry-pick
+	rb = rebase
 [rebase]
 	autoSquash = true
 	updateRefs = true

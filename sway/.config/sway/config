@@ -6,6 +6,7 @@ set $menu wofi
 set $browser firefox
 
 bindsym $mod+D kill
+bindsym $mod+F focus mode_toggle
 bindsym $mod+P exec sway exit
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
@@ -19,6 +20,7 @@ bindsym $mod+J exec binaryninja
 bindsym $mod+S exec bytedance-feishu-stable
 bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
 bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
+# bindsym $mod+F output "Chimei Innolux Corporation 0x15F6 Unknown" toggle
 bindsym $mod+H output "Chimei Innolux Corporation 0x15F6 Unknown" enable
 bindsym $mod+G output "Chimei Innolux Corporation 0x15F6 Unknown" disable
 bindsym $mod+N exec $term newsboat
@@ -37,7 +39,7 @@ output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
 output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.125 pos 1920 0 res 1920x1080@60Hz
 output "TXD HDMI Unknown" scale 1.125
 
-exec swaybg -i $HOME/.local/share/wallpaper/bg.png
+exec swaybg -i $HOME/.local/share/wallpaper/bg.jpg
 exec foot --server
 exec waybar
 exec mako

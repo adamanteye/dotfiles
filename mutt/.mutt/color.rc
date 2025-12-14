@@ -13,6 +13,7 @@ color   body    brightwhite     default      ^[[:space:]].*
 color   body    yellow          default      ^(diff).*
 color   body    brightwhite     default      ^(\s).*
 color   body    cyan            default      ^(Signed-off-by).*
+color   body    brightwhite     default      ^(Good\ signature\ from).*
 color   body    brightwhite     default      ^(Cc)
 color   body    yellow          default      "^diff \-.*"
 color   body    brightwhite     default      "^index [a-f0-9].*"

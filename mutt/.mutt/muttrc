@@ -10,9 +10,10 @@ source ~/.mutt/mailboxes
 folder-hook +tsinghua 'source ~/.mutt/tsinghua.hook'
 folder-hook +gmail 'source ~/.mutt/gmail.hook'
 folder-hook +disroot 'source ~/.mutt/disroot.hook'
+folder-hook +ada 'source ~/.mutt/ada.hook'
 
 # Default Folder
-source ~/.mutt/disroot.hook
+source ~/.mutt/ada.hook
 
 # Sidebar
 set sidebar_visible=yes

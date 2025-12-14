@@ -1,3 +1,4 @@
+mailboxes "+ada/inbox" "+ada/draft" "+ada/sent" "+ada/junk" "+ada/trash"
 mailboxes "+disroot/inbox" "+disroot/draft" "+disroot/sent" "+disroot/junk" "+disroot/trash"
 mailboxes "+gmail/inbox" "+gmail/draft" "+gmail/sent" "+gmail/junk" "+gmail/trash"
 mailboxes "+tsinghua/draft" "+tsinghua/inbox" "+tsinghua/sent" "+tsinghua/junk" "+tsinghua/trash"
