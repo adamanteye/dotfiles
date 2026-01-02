@@ -21,6 +21,11 @@ if not contains "$HOME/.local/bin" $PATH
     set -x PATH "$HOME/.local/bin" $PATH
 end
 
+# cargo bin
+if not contains "$HOME/.cargo/bin" $PATH
+    set -x PATH "$HOME/.cargo/bin" $PATH
+end
+
 # gpg and ssh
 if test -S (gpgconf --list-dirs agent-ssh-socket)
     set -gx SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)

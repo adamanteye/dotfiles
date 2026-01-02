@@ -16,7 +16,6 @@ abbr -a j journalctl
 abbr -a h hx
 abbr -a hl hledger
 abbr -a t tmux
-abbr -a m man
 abbr -a sw sway
 
 alias objdump='/usr/bin/objdump -M suffix'
@@ -32,10 +31,7 @@ alias rm='rm -vi'
 
 alias ip='ip --color=auto'
 
-alias chrome='google-chrome-stable'
-
-alias weather-beijing='curl wttr.in/beijing'
-alias weather-yinchuan='curl wttr.in/yinchuan'
+alias m=neomutt
 
 abbr -a setproxy 'export ALL_PROXY=http://[::1]:10801 && export HTTPS_PROXY=http://[::1]:10801'
 abbr -a unsetproxy 'export ALL_PROXY= && export HTTPS_PROXY='

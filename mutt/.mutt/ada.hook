@@ -4,3 +4,4 @@ set postponed=+ada/draft
 set record=+ada/inbox
 set trash=+ada/trash
 set pgp_default_key="744233565E837DD4B918D9EF53D64EB719901BD8"
+set signature=~/.mutt/ada.sig

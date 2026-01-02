@@ -38,7 +38,7 @@
 	eol = lf
 [color]
 	ui = true
-	pager = false
+	pager = true
 [pull]
 	rebase = true
 [diff]
@@ -49,3 +49,5 @@
 	sort = -committerdate
 [format]
 	signOff = true
+[sendemail]
+	annotate = yes

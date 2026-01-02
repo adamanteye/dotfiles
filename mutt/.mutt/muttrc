@@ -36,7 +36,9 @@ set status_on_top
 set send_charset = "utf-8"
 set delete = yes
 
-set crypt_autosign = yes
+set crypt_auto_sign = yes
+set crypt_opportunistic_encrypt = yes
+
 set crypt_reply_encrypt = yes
 set crypt_reply_sign_encrypted = yes
 
