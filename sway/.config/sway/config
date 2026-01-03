@@ -16,7 +16,6 @@ bindsym $mod+R exec $menu
 bindsym $mod+V exec cliphist list | $menu --dmenu | cliphist decode | wl-copy
 bindsym $mod+W exec $browser https://szfilehelper.weixin.qq.com/
 bindsym $mod+J exec binaryninja
-bindsym $mod+S exec bytedance-feishu-stable
 bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
 bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
 # output toggle is an expensive, blocking operation in sway.
@@ -55,8 +54,8 @@ bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@
 bindsym --locked XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 # Special keys to adjust brightness via brightnessctl
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2.5%+
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # Switch to workspace
 bindsym $mod+1 workspace number 1
