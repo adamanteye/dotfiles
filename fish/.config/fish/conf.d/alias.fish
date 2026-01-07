@@ -15,7 +15,7 @@ abbr -a g git
 abbr -a j journalctl
 abbr -a h hx
 abbr -a hl hledger
-abbr -a t tmux
+alias t='tmuxp load default'
 abbr -a sw sway
 
 alias objdump='/usr/bin/objdump -M suffix'
@@ -25,7 +25,6 @@ alias ls='ls --color=auto'
 alias la='ls -A --color=auto'
 alias ll='ls -lh --color=auto'
 
-alias less='less -r'
 alias grep='grep --color=auto'
 alias rm='rm -vi'
 

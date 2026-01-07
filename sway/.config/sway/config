@@ -1,5 +1,6 @@
 include /etc/sway/config.d/*
 
+xwayland disable
 set $mod Super
 set $term footclient
 set $menu wofi
@@ -9,7 +10,7 @@ bindsym $mod+D kill
 bindsym $mod+P exec sway exit
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
-bindsym $mod+Z exec zotero
+bindsym $mod+Z exec zotero --profile "$HOME/.zotero/zotero/xuelin.default"
 bindsym $mod+I exec code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=2
 bindsym $mod+M exec $term neomutt
 bindsym $mod+R exec $menu
@@ -17,7 +18,7 @@ bindsym $mod+V exec cliphist list | $menu --dmenu | cliphist decode | wl-copy
 bindsym $mod+W exec $browser https://szfilehelper.weixin.qq.com/
 bindsym $mod+J exec binaryninja
 bindsym $mod+C exec $browser --profile "$HOME/.mozilla/firefox/crawler/"
-bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
+bindsym $mod+Q exec zotero --profile "$HOME/.zotero/zotero/tjjk.default"
 # output toggle is an expensive, blocking operation in sway.
 # The binding is triggered on key press, and sway blocks while waiting
 # for the toggle to complete. During this time, the key release event
@@ -25,7 +26,7 @@ bindsym $mod+Q exec zotero --profile "$HOME/.zotero_tjjk"
 # the key as still pressed and generate a repeat.
 bindsym --no-repeat $mod+H output "BOE NV140WUM-N4H Unknown" toggle
 bindsym $mod+N exec $term newsboat
-bindsym $mod+O exec swaylock --ignore-empty-password -i $HOME/.local/share/wallpaper/bg.png
+bindsym $mod+O exec swaylock --ignore-empty-password -i $HOME/.local/share/wallpaper/bg.jpg
 
 bindsym $mod+Shift+C reload
 

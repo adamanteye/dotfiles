@@ -11,15 +11,15 @@
 	sort = version:refname
 [alias]
 	ss = status
-	st = stash
 	kmt = commit
 	chk = checkout
-	gr = log --oneline --decorate --all --graph --color
+	ol = log --oneline --decorate --all --graph --color
+	st = log --pretty=short --decorate --all --graph --color
 	br = branch -vv --all
 	ps = push
 	pl = pull
 	df = diff
-	cl = clone
+	kl = clone
 	fp = format-patch
 	cp = cherry-pick
 	rb = rebase

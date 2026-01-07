@@ -1,19 +1,26 @@
-bind pager h display-toggle-weed
-bind pager j previous-line
-bind pager k next-line
-bind pager <up> previous-line
-bind pager <down> next-line
-bind index h previous-entry
-bind index l next-entry
-bind index A group-reply
-bind pager A group-reply
-bind index \Cu half-up
-bind pager \Cu half-up
-bind index \Cd half-down
-bind pager \Cd half-down
-
 bind index,pager g noop
-bind index ge last-entry
-bind index gg first-entry
+
+bind pager H display-toggle-weed
+bind pager h exit
+bind pager k previous-line
+bind pager j next-line
 bind pager gg top
 bind pager ge bottom
+
+bind pager \Cu half-up
+bind pager \Cd half-down
+
+macro index h <change-folder>?
+bind index k previous-entry
+bind index j next-entry
+bind index l display-message
+bind index \Cu half-up
+bind index \Cd half-down
+
+bind browser l select-entry
+
+bind pager A group-reply
+bind index A group-reply
+
+bind index ge last-entry
+bind index gg first-entry
