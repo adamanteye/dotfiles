@@ -35,7 +35,7 @@ bindsym $mod+Down resize grow height 10px
 bindsym $mod+Up resize shrink height 10px
 bindsym $mod+Left resize grow width 10px
 
-bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/Pictures/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
+bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 
 # output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
 # output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.125 pos 1920 0 res 1920x1080@60Hz
@@ -104,7 +104,7 @@ bar {
     position bottom
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while xuelin-bar; do sleep 5; done
+    status_command while xuelin-bar; do sleep 20; done
     colors {
         statusline #ffffff
         background #323232

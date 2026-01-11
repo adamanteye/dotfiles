@@ -1,23 +1,17 @@
 session_name: default
 windows:
   - window_name: work
-    start_directory: ~/Documents
+    start_directory: ~/t
     panes:
       - ip a
   - window_name: email
-    layout: main-horizontal
+    layout: main-vertical
     panes:
       - neomutt
-      - newsboat
+      - null
   - window_name: blog
-    start_directory: ~/Documents/blog
+    start_directory: ~/i/blog
     layout: main-horizontal
     panes:
       - null
       - null
-  - window_name: ledger
-    panes:
-      - null
-  - window_name: music
-    panes:
-      - musicfox
