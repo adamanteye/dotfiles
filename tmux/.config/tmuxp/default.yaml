@@ -1,17 +1,13 @@
 session_name: default
 windows:
-  - window_name: work
+  - window_name: tjjk
     start_directory: ~/t
     panes:
-      - ip a
+      - null
   - window_name: email
-    layout: main-vertical
     panes:
-      - neomutt
       - null
   - window_name: blog
     start_directory: ~/i/blog
-    layout: main-horizontal
     panes:
-      - null
       - null

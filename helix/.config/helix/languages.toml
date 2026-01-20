@@ -1,3 +1,10 @@
+# for plain text
+# [[language]]
+# name = "default"
+# scope = "source.default"
+# comment-token = "#"
+# file-types = ["*"]
+
 [[language]]
 name = "dockerfile"
 auto-format = true

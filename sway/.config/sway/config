@@ -39,7 +39,7 @@ bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m
 
 # output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
 # output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.125 pos 1920 0 res 1920x1080@60Hz
-output "BOE NV140WUM-N4H Unknown" scale 1.125
+output "BOE NV140WUM-N4H Unknown" scale 1
 
 exec swaybg -i $HOME/.local/share/wallpaper/bg.jpg
 exec foot --server
@@ -82,7 +82,7 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-font "LXGW Bright Code TC" Regular 14
+font "Source Code Pro" Regular 12
 
 input "type:pointer" {
     pointer_accel 0.7
