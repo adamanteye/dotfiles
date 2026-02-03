@@ -32,8 +32,8 @@ alias ip='ip --color=auto'
 
 alias m=neomutt
 
-abbr -a setproxy 'export ALL_PROXY=http://[::1]:10801 && export HTTPS_PROXY=http://[::1]:10801'
-abbr -a unsetproxy 'export ALL_PROXY= && export HTTPS_PROXY='
+abbr -a setproxy 'export SOCKS_PROXY=socks://[2a0c:b641:69c:adb0:1::2]:10800 && export HTTPS_PROXY=http://[2a0c:b641:69c:adb0:1::2]:10801'
+abbr -a unsetproxy 'export SOCKS_PROXY= && export HTTPS_PROXY='
 
 alias gitcountcode='git ls-files | grep -vE "(png|jpg|ico|svg|pdf|lock)" | xargs wc -l'
 alias gitcountall='git diff --stat "$(git hash-object -t tree /dev/null)"'

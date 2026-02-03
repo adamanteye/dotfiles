@@ -11,6 +11,8 @@ bind pager \Cu half-up
 bind pager \Cd half-down
 
 macro index h <change-folder>?
+macro pager o "<pipe-message> urlscan<Enter>" "extract links out of a message"
+
 bind index k previous-entry
 bind index j next-entry
 bind index l display-message

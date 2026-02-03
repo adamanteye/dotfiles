@@ -2,12 +2,10 @@ set -x EDITOR hx
 set -x MANROFFOPT -c
 set -x VISUAL hx
 set -x BROWSER firefox
-set -x ALL_PROXY 'http://[::1]:10801'
-set -x HTTPS_PROXY 'http://[::1]:10801'
-set -x HTTP_PROXY 'http://[::1]:10801'
-set -x SOCKS_PROXY 'socks://[::1]:10800'
+set -x HTTPS_PROXY 'http://[2a0c:b641:69c:adb0:1::2]:10801'
+set -x SOCKS_PROXY 'socks://[2a0c:b641:69c:adb0:1::2]:10800'
 
-set -x DEBEMAIL "adamanteye@disroot.org"
+set -x DEBEMAIL "xuelin@adamanteye.cc"
 set -x DEBFULLNAME "Xuelin Yang"
 
 # fortune

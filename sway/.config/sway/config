@@ -11,7 +11,7 @@ bindsym $mod+P exec sway exit
 bindsym $mod+T exec $term
 bindsym $mod+B exec $browser
 bindsym $mod+Z exec zotero --profile "$HOME/.zotero/zotero/xuelin.default"
-bindsym $mod+I exec code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=2
+bindsym $mod+I exec zeditor
 bindsym $mod+M exec $term neomutt
 bindsym $mod+R exec $menu
 bindsym $mod+V exec cliphist list | $menu --dmenu | cliphist decode | wl-copy
@@ -91,6 +91,7 @@ input "type:pointer" {
 input "type:touchpad" {
     dwt enabled
     tap enabled
+    middle_emulation enabled
     pointer_accel 1.0
 }
 

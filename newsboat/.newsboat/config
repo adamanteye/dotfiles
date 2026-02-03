@@ -20,3 +20,6 @@ cleanup-on-quit yes
 
 # killfiles
 ignore-article "https://rustcc.cn/rss" "title !~ \"【Rust日报】\""
+
+# color
+include "/usr/share/doc/newsboat/contrib/colorschemes/gruvbox"

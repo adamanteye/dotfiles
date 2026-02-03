@@ -1,13 +1,24 @@
 session_name: default
 windows:
-  - window_name: tjjk
-    start_directory: ~/t
+  - window_name: juno
+    start_directory: ~/j
     panes:
       - null
   - window_name: email
     panes:
       - null
+  - window_name: tjjk
+    start_directory: ~/t
+    panes:
+      - null
   - window_name: blog
     start_directory: ~/i/blog
+    panes:
+      - null
+  - window_name: kubernetes
+    start_directory: ~/i/cluster
+    panes:
+      - null
+  - window_name: music
     panes:
       - null

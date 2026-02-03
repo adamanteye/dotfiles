@@ -37,6 +37,11 @@ formatter = { command = "hledger", args = [
 auto-format = true
 
 [[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
 name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 auto-format = true
