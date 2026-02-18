@@ -7,7 +7,6 @@
 	template = ~/.git-template/commit-msg
 	verbose = true
 [tag]
-	gpgSign = true
 	sort = version:refname
 [alias]
 	ss = status
@@ -51,3 +50,5 @@
 	signOff = true
 [sendemail]
 	annotate = yes
+[protocol]
+	version = 2

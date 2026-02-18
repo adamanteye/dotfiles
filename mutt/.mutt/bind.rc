@@ -22,7 +22,7 @@ bind index \Cd half-down
 bind browser l select-entry
 
 bind pager A group-reply
-bind index A group-reply
+macro index A "<tag-pattern>.~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>"
 
 bind index ge last-entry
 bind index gg first-entry
