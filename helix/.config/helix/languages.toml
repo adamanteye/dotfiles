@@ -1,9 +1,30 @@
-# for plain text
 # [[language]]
 # name = "default"
 # scope = "source.default"
 # comment-token = "#"
 # file-types = ["*"]
+# formatter = { command = "typstyle", args = [
+#   "--wrap-text",
+#   "-t",
+#   "2",
+#   "-l",
+#   "80",
+# ] }
+# auto-format = true
+
+[[language]]
+name = "bibtex"
+formatter = { command = "bibtex-tidy", args = [
+  "--tab",
+  "--sort=-year,name",
+  "--omit=urldate,file,keywords,langid,abstract",
+  "--merge=combine",
+  "--drop-all-caps",
+  "--sort-fields",
+  "--strip-comments",
+  "--max-authors=5",
+] }
+auto-format = true
 
 [[language]]
 name = "dockerfile"
