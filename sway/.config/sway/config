@@ -9,6 +9,7 @@ set $browser firefox
 bindsym $mod+D kill
 bindsym $mod+P exec sway exit
 bindsym $mod+T exec $term
+bindsym $mod+L exec Telegram
 bindsym $mod+B exec $browser
 bindsym $mod+Z exec zotero --profile "$HOME/.zotero/zotero/xuelin.default"
 bindsym $mod+I exec zeditor

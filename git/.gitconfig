@@ -52,3 +52,5 @@
 	annotate = yes
 [protocol]
 	version = 2
+[push]
+	autoSetupRemote = true

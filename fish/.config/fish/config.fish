@@ -7,6 +7,7 @@ set -x SOCKS_PROXY 'socks://[2a0c:b641:69c:adb0:1::2]:10800'
 
 set -x DEBEMAIL "xuelin@adamanteye.cc"
 set -x DEBFULLNAME "Xuelin Yang"
+set -x MAKEFLAGS "--jobs=$(nproc)"
 
 # fortune
 if status is-interactive
