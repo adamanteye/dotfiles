@@ -1,35 +1,20 @@
 source ~/.mutt/color.rc
 source ~/.mutt/bind.rc
 source ~/.mutt/gpg.rc
+source ~/.mutt/notmuch.rc
 source ~/.contact
 
 # Folders
 set mbox_type = Maildir
-set folder = $HOME/m
-source ~/.mutt/mailboxes
-folder-hook +tsinghua 'source ~/.mutt/tsinghua.hook'
-folder-hook +gmail 'source ~/.mutt/gmail.hook'
-folder-hook +disroot 'source ~/.mutt/disroot.hook'
-folder-hook +ada 'source ~/.mutt/ada.hook'
-
-# Default Folder
-source ~/.mutt/ada.hook
+set folder=~/m/ada
+set signature=~/.mutt/sig
 
 # index
 set index_format = "%4C %Z %{%b %d} %-15.15L %s"
 
 # Sidebar
-set sidebar_delim_chars = '/.'
-set sidebar_divider_char = '|'
-set sidebar_folder_indent = no
-set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
-set sidebar_indent_string = '  '
-set sidebar_new_mail_only = no
-set sidebar_next_new_wrap = no
-set sidebar_short_path = no
-set sidebar_sort = path
 set sidebar_visible = no
-set sidebar_width = 18
+bind index,pager B sidebar-toggle-visible
 
 # General
 set include = yes
@@ -50,7 +35,8 @@ set abort_noattach = ask-yes
 
 # SMTP
 # https://unix.stackexchange.com/questions/385179/multiple-smtp-accounts-with-mutt-and-msmtp
-set sendmail = /usr/bin/msmtp
+set sendmail = /usr/local/bin/msmtpq
+set sendmail_wait = -1
 set use_from = yes
 set envelope_from = yes
 
@@ -62,10 +48,6 @@ set new_mail_command = 'notify-send -t 5000 Mutt "new mails in %b mailboxes" && 
 # Messages
 set sort = threads
 set sort_aux = reverse-last-date-received
-
-# Mailboxes
-set browser_sort = alpha
-set browser_sort_dirs_first = yes
 
 # For pager
 set pager_stop

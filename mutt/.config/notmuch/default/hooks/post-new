@@ -1,0 +1,5 @@
+#!/bin/sh
+notmuch tag +github -- 'thread{from:@github.com}'
+notmuch tag +learn -- 'thread:{from:sys-learn2018@tsinghua.edu.cn}'
+notmuch tag +sent -- 'thread:{from:@adamanteye.cc}'
+notmuch tag +tjjk -- 'thread:{from:@airelinux.org}'

@@ -1,0 +1,19 @@
+set browser_sort=unsorted
+set browser_sort_dirs_first=no
+
+set from="Xuelin Yang <xuelin@adamanteye.cc>"
+set virtual_spool_file=yes
+set spoolfile=~/m/ada/inbox
+set postponed=~/m/ada/draft
+set record=~/m/ada/inbox
+set trash=~/m/ada/trash
+set pgp_default_key="744233565E837DD4B918D9EF53D64EB719901BD8"
+
+set nm_default_url = "notmuch:///home/xuelin/m/ada"
+named-mailboxes "tjjk"   "notmuch://?query=tag:tjjk"
+named-mailboxes "github" "notmuch://?query=tag:github"
+named-mailboxes "learn" "notmuch://?query=tag:learn"
+named-mailboxes "personal" "notmuch://?query=tag:inbox and not tag:tjjk and not tag:github and not tag:learn"
+named-mailboxes "sent" "notmuch://?query=tag:sent"
+named-mailboxes "unread" "notmuch://?query=tag:unread and tag:inbox"
+named-mailboxes "inbox" "notmuch://?query=tag:inbox"
