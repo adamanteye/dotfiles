@@ -1,6 +1,6 @@
 include /etc/sway/config.d/*
 
-xwayland disable
+# xwayland disable
 set $mod Super
 set $term footclient
 set $menu wofi
@@ -13,7 +13,7 @@ bindsym $mod+L exec Telegram
 bindsym $mod+B exec $browser
 bindsym $mod+Z exec zotero --profile "$HOME/.zotero/zotero/xuelin.default"
 bindsym $mod+I exec zeditor
-bindsym $mod+M exec $term neomutt
+bindsym $mod+M exec mattermost-desktop
 bindsym $mod+R exec $menu
 bindsym $mod+V exec cliphist list | $menu --dmenu | cliphist decode | wl-copy
 bindsym $mod+W exec $browser https://szfilehelper.weixin.qq.com/

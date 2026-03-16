@@ -1,6 +1,6 @@
-abbr -a c clear
 abbr -a k kubectl
 abbr -a vim hx
+abbr -a nvim hx
 abbr -a wk wl-copy
 abbr -a kmt 'git kmt'
 abbr -a n networkctl

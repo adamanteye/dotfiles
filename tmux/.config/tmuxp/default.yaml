@@ -15,10 +15,9 @@ windows:
     start_directory: ~/i/blog
     panes:
       - null
-  - window_name: kubernetes
-    start_directory: ~/i/cluster
+      - while inotifywait -e modify -r src/; make ; end
+  - window_name: slide
+    start_directory: ~/i/meet
     panes:
       - null
-  - window_name: music
-    panes:
-      - null
+      - while inotifywait -e modify -r src/; make ; end

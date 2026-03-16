@@ -1,5 +1,9 @@
 #!/bin/sh
-notmuch tag +github -- 'thread{from:@github.com}'
+notmuch tag +kaiser -- 'thread:{from:@airelinux.org}'
+notmuch tag +kaiserin -- 'thread:{from:@l.airelinux.org}'
+notmuch tag +kaiserin -- 'thread:{to:@l.airelinux.org}'
+notmuch tag +tuna -- 'thread:{from:tuna-general@googlegroups.com}'
+notmuch tag +tuna -- 'thread:{to:tuna-general@googlegroups.com}'
+notmuch tag +github -- 'thread:{from:@github.com}'
 notmuch tag +learn -- 'thread:{from:sys-learn2018@tsinghua.edu.cn}'
 notmuch tag +sent -- 'thread:{from:@adamanteye.cc}'
-notmuch tag +tjjk -- 'thread:{from:@airelinux.org}'

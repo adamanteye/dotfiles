@@ -1,16 +1,19 @@
-# [[language]]
-# name = "default"
-# scope = "source.default"
-# comment-token = "#"
-# file-types = ["*"]
-# formatter = { command = "typstyle", args = [
-#   "--wrap-text",
-#   "-t",
-#   "2",
-#   "-l",
-#   "80",
-# ] }
-# auto-format = true
+[[language]]
+name = "email"
+scope = "source.default"
+file-types = ["*"]
+formatter = { command = "typstyle", args = [
+  "--wrap-text",
+  "-t",
+  "2",
+  "-l",
+  "80",
+] }
+language-servers = ["helix-assist"]
+auto-format = true
+
+[language-server.helix-assist]
+command = "helix-assist"
 
 [[language]]
 name = "bibtex"
@@ -92,6 +95,11 @@ auto-format = true
 name = "yaml"
 file-types = ["yml", "yaml"]
 formatter = { command = "yamlfmt", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 auto-format = true
 
 [[language]]

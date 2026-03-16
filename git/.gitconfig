@@ -19,6 +19,7 @@
 	pl = pull
 	df = diff
 	kl = clone
+	sl = clone --depth 1 --no-checkout --filter="tree:0"
 	fp = format-patch
 	cp = cherry-pick
 	rb = rebase
@@ -38,8 +39,6 @@
 [color]
 	ui = true
 	pager = true
-[pull]
-	rebase = true
 [diff]
 	algorithm = histogram
 [column]
