@@ -1,6 +1,6 @@
 include /etc/sway/config.d/*
 
-# xwayland disable
+xwayland enable
 set $mod Super
 set $term footclient
 set $menu wofi
