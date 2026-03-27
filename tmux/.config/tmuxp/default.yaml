@@ -15,9 +15,9 @@ windows:
     start_directory: ~/i/blog
     panes:
       - null
-      - while inotifywait -e modify -r src/; make ; end
+      - miniserve build -p 8964&; while inotifywait -q -e modify -r src/; make LIVE=y; end
   - window_name: slide
-    start_directory: ~/i/meet
+    start_directory: ~/t/meet
     panes:
       - null
-      - while inotifywait -e modify -r src/; make ; end
+      - while inotifywait -q -e modify -r src/; make ; end

@@ -1,4 +1,9 @@
 [[language]]
+name = "make"
+formatter = { command = "mbake", args = ["format", "--stdin"] }
+auto-format = true
+
+[[language]]
 name = "email"
 scope = "source.default"
 file-types = ["*"]
@@ -9,7 +14,6 @@ formatter = { command = "typstyle", args = [
   "-l",
   "80",
 ] }
-language-servers = ["helix-assist"]
 auto-format = true
 
 [language-server.helix-assist]

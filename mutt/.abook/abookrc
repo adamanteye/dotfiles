@@ -1,0 +1,2 @@
+set add_email_prevent_duplicates=true
+set sort_field=email

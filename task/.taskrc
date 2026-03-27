@@ -1,0 +1,5 @@
+# [Created by task 3.4.2 3/25/2026 15:31:08]
+data.location=/home/xuelin/.task
+news.version=3.4.2
+dateformat.report=Y-M-DTH:N
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled,due,until,description,urgency

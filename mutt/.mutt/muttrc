@@ -2,7 +2,6 @@ source ~/.mutt/color.rc
 source ~/.mutt/bind.rc
 source ~/.mutt/gpg.rc
 source ~/.mutt/notmuch.rc
-source ~/.contact
 
 # Folders
 set mbox_type = Maildir
@@ -22,6 +21,7 @@ set quit = ask-yes
 set status_on_top
 set send_charset = "utf-8"
 set delete = yes
+set pipe_decode = yes
 
 set crypt_auto_sign = yes
 set crypt_opportunistic_encrypt = yes
