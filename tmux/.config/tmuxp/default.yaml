@@ -15,7 +15,11 @@ windows:
     start_directory: ~/i/blog
     panes:
       - null
-      - miniserve build -p 8964&; while inotifywait -q -e modify -r src/; make LIVE=y; end
+      - python -m http.server -b ::1 -d build 8964&; while inotifywait -q -e modify -e delete -r src/; make LIVE=y; end
+  - window_name: self
+    start_directory: ~/i
+    panes:
+      - null
   - window_name: slide
     start_directory: ~/t/meet
     panes:
