@@ -1,7 +1,7 @@
 [user]
 	name = Xuelin Yang
 	email = xuelin@adamanteye.cc
-	signingKey = 744233565E837DD4B918D9EF53D64EB719901BD8
+	signingKey = FC7551A077C73C717228569550DFEB73EC767C31!
 [commit]
 	gpgsign = true
 	template = ~/.git-template/commit-msg
@@ -18,6 +18,9 @@
 	ps = push
 	pl = pull
 	df = diff
+	ds = diff --staged
+	wt = worktree
+	wl = worktree list
 	kl = clone
 	sl = clone --depth 1 --no-checkout --filter="tree:0"
 	fp = format-patch

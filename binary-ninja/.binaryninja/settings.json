@@ -1,3 +1,4 @@
 {
-    "arch.x86.disassembly.syntax": "AT&T"
+    "arch.x86.disassembly.syntax": "AT&T",
+    "crashReporting.enabled": true
 }

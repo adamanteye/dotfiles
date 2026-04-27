@@ -23,6 +23,8 @@ set send_charset = "utf-8"
 set delete = yes
 set pipe_decode = yes
 
+set pgp_sign_as = "FC7551A077C73C717228569550DFEB73EC767C31!"
+
 set crypt_auto_sign = yes
 set crypt_opportunistic_encrypt = yes
 

@@ -36,6 +36,7 @@ bindsym $mod+Down resize grow height 10px
 bindsym $mod+Up resize shrink height 10px
 bindsym $mod+Left resize grow width 10px
 
+bindsym $mod+Shift+S exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m-%dT%H:%M:%S%Z).png" | wl-copy
 
 # output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz

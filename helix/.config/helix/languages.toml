@@ -41,8 +41,15 @@ auto-format = true
 name = "docker-compose"
 auto-format = true
 
+[[language]]
+name = "rust"
+auto-format = true
+
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
 
 [[language]]
 name = "typst"

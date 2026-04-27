@@ -13,6 +13,7 @@ text-width = 80
 completion-replace = true
 auto-pairs = false
 insert-final-newline = true
+default-line-ending = "lf"
 
 [editor.statusline]
 left = ["mode", "read-only-indicator", "spinner", "version-control"]

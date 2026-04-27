@@ -1,7 +1,11 @@
 #!/bin/sh
 notmuch tag +kaiser -- 'thread:{from:@airelinux.org}'
-notmuch tag +kaiserin -- 'thread:{from:@l.airelinux.org}'
-notmuch tag +kaiserin -- 'thread:{to:@l.airelinux.org}'
+notmuch tag +kaiser -- 'thread:{from:@l.airelinux.org}'
+notmuch tag +kaiser -- 'thread:{to:@l.airelinux.org}'
+notmuch tag +kaiser -- 'thread:{from:tjjk@googlegroups.com}'
+notmuch tag +kaiser -- 'thread:{to:tjjk@googlegroups.com}'
+notmuch tag +kaiserin -- 'thread:{to:@lists.archlinux.org}'
+notmuch tag +kaiserin -- 'thread:{from:@lists.archlinux.org}'
 notmuch tag +tuna -- 'thread:{from:tuna-general@googlegroups.com}'
 notmuch tag +tuna -- 'thread:{to:tuna-general@googlegroups.com}'
 notmuch tag +github -- 'thread:{from:@github.com}'

@@ -16,6 +16,9 @@ windows:
     panes:
       - null
       - python -m http.server -b ::1 -d build 8964&; while inotifywait -q -e modify -e delete -r src/; make LIVE=y; end
+    layout: main-horizontal
+    options:
+      main-pane-height: 90%
   - window_name: self
     start_directory: ~/i
     panes:
@@ -25,3 +28,5 @@ windows:
     panes:
       - null
       - while inotifywait -q -e modify -r src/; make ; end
+    options:
+      main-pane-height: 90%
