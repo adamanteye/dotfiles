@@ -1,7 +1,7 @@
 theme = "base16_terminal"
 
 [editor]
-shell = ["fish", "c"]
+shell = ["fish", "-c"]
 line-number = "relative"
 cursorline = true
 color-modes = true

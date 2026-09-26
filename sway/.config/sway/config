@@ -1,7 +1,7 @@
 include /etc/sway/config.d/*
 
 xwayland enable
-set $mod Super
+set $mod Alt
 set $term footclient
 set $menu wofi
 set $browser firefox-esr
@@ -38,6 +38,7 @@ bindsym Print exec grim -g "$(slurp)" - | tee "$HOME/p/screenshots/$(date +%Y-%m
 
 # output "JZH JZKJ 0x00001A0A" scale 1 pos 0 0 res 1920x1080@60Hz
 # output "Chimei Innolux Corporation 0x15F6 Unknown" scale 1.125 pos 1920 0 res 1920x1080@60Hz
+output "SAC HDMI Unknown" scale 1
 output "BOE NV140WUM-N4H Unknown" scale 1
 output "AD electronics G24L22S 0x00000006" transform 270
 # chep
@@ -135,3 +136,5 @@ bar {
     # The default just shows the current date and time.
     status_command while xuelin-bar; do sleep 20; done
 }
+
+for_window [app_id="telegram|firefox-esr|foot|element|electron|Element"] opacity set 0.9
