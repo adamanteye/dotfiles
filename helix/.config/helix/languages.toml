@@ -13,17 +13,24 @@ formatter = { command = "bibtex-tidy", args = [
     "--sort=-year,name",
     "--omit=urldate,file,keywords,langid,abstract",
     "--merge=combine",
-    "--drop-all-caps",
     "--sort-fields",
     "--strip-comments",
-    "--max-authors=5",
 ] }
 auto-format = true
 
 [[language]]
 name = "latex"
+indent = { tab-width = 2, unit = "  " }
 formatter = { command = "tex-fmt", args = ["--stdin"] }
 auto-format = true
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+forwardSearchAfter = false
+
+[language-server.texlab.config.texlab.chktex]
+onOpenAndSave = true
+onEdit = false
 
 [[language]]
 name = "dockerfile"
