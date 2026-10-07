@@ -1,7 +1,7 @@
 include /etc/sway/config.d/*
 
 xwayland enable
-set $mod Alt
+set $mod Super
 set $term footclient
 set $menu wofi
 set $browser firefox-esr
