@@ -112,29 +112,45 @@ input "type:keyboard" {
 }
 
 set {
-    $col_urgent                   #af3a03
-    $col_focused                  #f2e5bc
+    # Gruvbox Material: gold focus, warm text, red urgency.
+    $col_urgent                   #ea6962
+    $col_focused                  #32302f
     $col_unfocused                #282828
-    $col_focused_inactive         #665c54
-    $col_text_dark                #504945
-    $col_text_light               #bdae93
-    $col_text_lightest            #fbf1c7
-    $col_urgent_border            #7c6f64
-    $col_focused_border           #ebdbb2
+    $col_focused_inactive         #3c3836
+    $col_text_dark                #282828
+    $col_text_light               #928374
+    $col_text_normal              #d4be98
+    $col_text_lightest            #ddc7a1
+    $col_urgent_border            #ea6962
+    $col_focused_border           #d8a657
     $col_unfocused_border         #3c3836
     $col_focused_inactive_border  #7c6f64
+    $col_visible_border           #7daea3
+    $col_separator                #5a524c
 }
 
-client.focused $col_focused_border $col_focused $col_text_dark $col_focused $col_focused_border
-client.focused_inactive $col_focused_inactive_border $col_focused_inactive $col_text_lightest $col_focused_inactive $col_focused_inactive_border
+client.focused $col_focused_border $col_focused $col_text_lightest $col_focused_border $col_focused_border
+client.focused_inactive $col_focused_inactive_border $col_focused_inactive $col_text_normal $col_focused_inactive $col_focused_inactive_border
 client.unfocused $col_unfocused_border $col_unfocused $col_text_light $col_unfocused $col_unfocused_border
-client.urgent $col_urgent_border $col_urgent $col_text_lightest $col_urgent $col_urgent_border
+client.urgent $col_urgent_border $col_urgent $col_text_dark $col_urgent $col_urgent_border
 
 bar {
     position top
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while xuelin-bar; do sleep 20; done
+    pango_markup enabled
+    status_command while "$HOME/.config/sway/status.sh"; do sleep 20; done
+
+    colors {
+        background $col_unfocused
+        statusline $col_text_normal
+        separator $col_separator
+        focused_workspace $col_focused_border $col_focused_border $col_text_dark
+        active_workspace $col_visible_border $col_focused_inactive $col_text_normal
+        inactive_workspace $col_unfocused $col_unfocused $col_text_light
+        urgent_workspace $col_urgent $col_urgent $col_text_dark
+        binding_mode $col_focused_border $col_focused_border $col_text_dark
+    }
 }
 
-for_window [app_id="telegram|firefox-esr|foot|element|electron|Element"] opacity set 0.9
+# Foot controls background translucency itself, keeping text fully opaque.
+for_window [app_id="^(foot|footclient|firefox-esr)$"] opacity set 1.0
+for_window [app_id="telegram|element|Element"] opacity set 0.95
