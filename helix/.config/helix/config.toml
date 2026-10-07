@@ -16,9 +16,16 @@ insert-final-newline = true
 default-line-ending = "lf"
 trim-trailing-whitespace = true
 trim-final-newlines = true
+rainbow-brackets = true
 
 [editor.statusline]
-left = ["mode", "read-only-indicator", "spinner", "version-control"]
+left = [
+    "mode",
+    "read-only-indicator",
+    "file-modification-indicator",
+    "spinner",
+    "version-control",
+]
 center = ["file-absolute-path", "total-line-numbers"]
 right = [
     "diagnostics",
@@ -39,3 +46,9 @@ wrap-at-text-width = true
 
 [editor.indent-guides]
 render = true
+
+[editor.lsp]
+auto-document-highlight = true
+
+[editor.word-completion]
+trigger-length = 4
