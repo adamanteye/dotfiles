@@ -16,6 +16,7 @@ macro index h <change-folder>?
 macro index,pager O "<enter-command>set my_html_mailcap_path=\$mailcap_path mailcap_path=~/.mutt/mailcap<Enter><view-attachments><first-entry><search>\\[text/html[, ]<Enter><view-mailcap><exit><enter-command>set mailcap_path=\$my_html_mailcap_path; unset my_html_mailcap_path<Enter>" "open HTML in Firefox"
 bind attach O view-mailcap
 macro index,pager o "<pipe-message> urlscan<Enter>" "extract links out of a message"
+macro index,pager C "<enter-command>set my_copy_wait_key=\$wait_key; unset wait_key<Enter><pipe-message>wl-copy --type 'text/plain;charset=utf-8'<Enter><enter-command>set wait_key=\$my_copy_wait_key; unset my_copy_wait_key<Enter>" "copy displayed message to clipboard"
 
 bind index k previous-entry
 bind index j next-entry

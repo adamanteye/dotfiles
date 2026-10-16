@@ -1,6 +1,6 @@
 auto-reload yes
 reload-threads 100
-browser "firefox-esr %u"
+browser "glide-bin %u"
 datetime-format "%Y-%m-%d"
 
 # bind keys - vim style

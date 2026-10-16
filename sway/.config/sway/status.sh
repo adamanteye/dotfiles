@@ -35,17 +35,17 @@ case "$status" in
 		;;
 esac
 
-printf '%s  %s  <span foreground="%s">BAT %s%% %s</span>' \
-	"$datetime" "$separator" "$color" "$capacity" "$label"
-
+power_text=''
 if [ -r "$battery_dir/power_now" ]; then
 	IFS= read -r power <"$battery_dir/power_now"
 	case "$power" in
 		'' | *[!0-9]*) ;;
 		*)
 			watts=$(LC_ALL=C awk -v power="$power" 'BEGIN { printf "%.1f", power / 1000000 }')
-			printf '  %s  %s W' "$separator" "$watts"
+			power_text="  $separator  $watts W"
 			;;
 	esac
 fi
-printf '\n'
+# Keep each update in one write: swaybar can display a partial pipe read.
+printf '%s  %s  <span foreground="%s">BAT %s%% %s</span>%s\n' \
+	"$datetime" "$separator" "$color" "$capacity" "$label" "$power_text"

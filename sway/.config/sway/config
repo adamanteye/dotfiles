@@ -4,7 +4,7 @@ xwayland enable
 set $mod Super
 set $term footclient
 set $menu wofi
-set $browser firefox-esr
+set $browser glide-bin
 
 bindsym $mod+D kill
 bindsym $mod+P exec sway exit
@@ -152,5 +152,5 @@ bar {
 }
 
 # Foot controls background translucency itself, keeping text fully opaque.
-for_window [app_id="^(foot|footclient|firefox-esr)$"] opacity set 1.0
+for_window [app_id="^(foot|footclient|firefox-esr|glide-browser-bin)$"] opacity set 1.0
 for_window [app_id="telegram|element|Element"] opacity set 0.95
